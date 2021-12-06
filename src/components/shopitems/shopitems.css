@@ -62,9 +62,9 @@ html, body {
 .shopitems {
   display: -ms-inline-grid;
   display: inline-grid;
-  -ms-grid-rows: (1fr)[2];
+  -ms-grid-rows: 1fr;
   -ms-grid-columns: (1fr)[4];
-      grid-template: repeat(2, 1fr)/repeat(4, 1fr);
+      grid-template: 1fr/repeat(4, 1fr);
   height: auto;
   gap: 10px;
   background-color: #fff;
@@ -77,7 +77,8 @@ html, body {
 }
 
 .shopitems .itemContainer .item-image {
-  max-width: 100%;
+  width: 100%;
+  height: 80vh;
 }
 
 .shopitems .itemContainer:hover {
@@ -113,7 +114,8 @@ html, body {
 
 .overlay button {
   border: none;
-  background-color: #333333;
+  background-color: #9b9b9b;
+  border: 1px solid #333333;
   -ms-flex-item-align: end;
       align-self: flex-end;
   padding: 0.3rem 0.6rem;
@@ -123,6 +125,7 @@ html, body {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 10px;
-  color: #F1EEE5;
+  color: #333333;
+  font-weight: bold;
 }
 /*# sourceMappingURL=shopitems.css.map */
