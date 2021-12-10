@@ -72,13 +72,12 @@
 
 @media only screen and (max-width: 750px) {
     .intro {
-        height: calc(60vh - 10vh);
+        height: calc(80vh - 10vh);
     }
 }
 
 @media only screen and (max-width: 525px) {
     .intro {
-        height: calc(80vh - 10vh);
         flex-direction: column;
         align-content: center;
 

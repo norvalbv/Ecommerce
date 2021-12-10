@@ -60,20 +60,38 @@ html, body {
 }
 
 /* Misc */
-.navbar {
-  height: 10vh;
-  background-color: #3c4d3e;
-  color: #F1EEE5;
+.newsletter {
+  margin: 2rem 0;
+  text-transform: capitalize;
+}
+
+.newsletter .text {
+  width: 80%;
+  height: 5rem;
+  background-color: #F1EEE5;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5rem;
 }
 
-.navbar .left input {
-  background-color: #F1EEE5;
+.newsletter .text button {
+  padding: 0.6rem 0.9rem;
+  background-color: none;
   border: 1px solid #9b9b9b;
+  border-radius: 5%;
+  cursor: pointer;
+  font-size: inherit;
 }
-/*# sourceMappingURL=navbar.css.map */
+
+.newsletter .text button:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=newsletter.css.map */
