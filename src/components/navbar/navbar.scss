@@ -3,5 +3,14 @@
 .navbar {
     height: 10vh;
     background-color: $secondary-clr-1;
-    color: #fff;
+    color: $primary-light;
+    display: flex;
+    align-items: center;
+
+    .left {
+        input {
+            background-color: $primary-light;
+            border: 1px solid $primary-neutral;
+        }
+    }
 }
