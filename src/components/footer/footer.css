@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+/* CSS HARD RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ---------------------------------- */
+/* Variables */
+/* Colors */
+/* Font */
+html, body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+/* Misc */
+.footer {
+  font-size: 12px;
+  background-color: #3c4d3e;
+  color: #F1EEE5;
+  padding: 0 1rem;
+  font-weight: 200;
+}
+
+.footer .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+.footer .top h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer .top .desc {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.footer .top .desc p {
+  width: 80%;
+  margin: auto;
+}
+
+.footer .top .links {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+  border-left: 1px solid #F1EEE5;
+  border-right: 1px solid #F1EEE5;
+  padding: 0 1rem;
+}
+
+.footer .top .links li {
+  cursor: pointer;
+}
+
+.footer .top .links li:hover {
+  color: #9b9b9b;
+}
+
+.footer .top .follow {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.footer .top .follow a {
+  color: inherit;
+  display: block;
+}
+
+.footer .top .follow a:hover {
+  color: #9b9b9b;
+}
+
+.footer .bottom {
+  padding: 2rem 0;
+  border-top: 1px solid #F1EEE5;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer .top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+  .footer .top .desc {
+    padding: 2rem 0;
+  }
+  .footer .top .links {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #F1EEE5;
+    border-bottom: 1px solid #F1EEE5;
+    padding: 2rem 0;
+  }
+  .footer .top .follow {
+    padding: 2rem 0;
+  }
+  .footer .copyright {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

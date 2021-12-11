@@ -13,7 +13,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 5rem;
+        gap: 5%;
 
         button {
             padding: 0.6rem 0.9rem;
@@ -26,6 +26,18 @@
             &:hover {
                 text-decoration: underline;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .newsletter {
+        .text {
+            width: 100%;
+        }
+
+        p {
+            text-align: center;
         }
     }
 }
