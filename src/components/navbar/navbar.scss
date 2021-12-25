@@ -1,16 +1,59 @@
 @import '../../universal.scss';
 
+// .MuiMenuItem-root, .MuiMenuItem-root, .MuiFormControl-fullWidth {
+//     font-size: 12px;
+//     background-color: #000;
+// }
+
 .navbar {
     height: 10vh;
+    font-size: 14px;
     background-color: $secondary-clr-1;
     color: $primary-light;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
 
     .left {
-        input {
-            background-color: $primary-light;
-            border: 1px solid $primary-neutral;
+        display: flex;
+        flex: 100%;
+
+        .search {
+            border: 1px solid $primary-light;
+            display: flex;
+            align-items: center;
+            padding: 0 0.5rem;
+            margin-left: 2rem;
+
+            input {
+                border: none;
+                background: none;
+                outline: none;
+                color: inherit;
+            }
+        }
+    }
+
+    .middle {
+        flex: 100%;
+        text-align: center;
+    }
+
+    .right {
+        flex: 100%;
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .shop-icon {
+            cursor: pointer;
         }
     }
 }

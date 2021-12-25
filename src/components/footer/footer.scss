@@ -1,7 +1,7 @@
 @import '../../universal.scss';
 
-.footer {
-    font-size: 12px;
+footer {
+    font-size: 12px !important;
     background-color: $secondary-clr-1;
     color: $primary-light;
     padding: 0 1rem;
@@ -70,7 +70,7 @@
 
 @media only screen and (max-width: 600px) { 
 
-    .footer {
+    footer {
 
         .top {
             flex-direction: column;
@@ -90,6 +90,11 @@
 
             .follow {
                 padding: 2rem 0;
+                
+                a {
+                    display: inline-block;
+                    padding: 0 1rem;
+                }
             }
         }
     

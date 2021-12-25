@@ -60,15 +60,15 @@ html, body {
 }
 
 /* Misc */
-.footer {
-  font-size: 12px;
+footer {
+  font-size: 12px !important;
   background-color: #3c4d3e;
   color: #F1EEE5;
   padding: 0 1rem;
   font-weight: 200;
 }
 
-.footer .top {
+footer .top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,23 +79,23 @@ html, body {
   line-height: 2;
 }
 
-.footer .top h3 {
+footer .top h3 {
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.footer .top .desc {
+footer .top .desc {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.footer .top .desc p {
+footer .top .desc p {
   width: 80%;
   margin: auto;
 }
 
-.footer .top .links {
+footer .top .links {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -111,56 +111,60 @@ html, body {
   padding: 0 1rem;
 }
 
-.footer .top .links li {
+footer .top .links li {
   cursor: pointer;
 }
 
-.footer .top .links li:hover {
+footer .top .links li:hover {
   color: #9b9b9b;
 }
 
-.footer .top .follow {
+footer .top .follow {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.footer .top .follow a {
+footer .top .follow a {
   color: inherit;
   display: block;
 }
 
-.footer .top .follow a:hover {
+footer .top .follow a:hover {
   color: #9b9b9b;
 }
 
-.footer .bottom {
+footer .bottom {
   padding: 2rem 0;
   border-top: 1px solid #F1EEE5;
 }
 
 @media only screen and (max-width: 600px) {
-  .footer .top {
+  footer .top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 0;
   }
-  .footer .top .desc {
+  footer .top .desc {
     padding: 2rem 0;
   }
-  .footer .top .links {
+  footer .top .links {
     border-left: none;
     border-right: none;
     border-top: 1px solid #F1EEE5;
     border-bottom: 1px solid #F1EEE5;
     padding: 2rem 0;
   }
-  .footer .top .follow {
+  footer .top .follow {
     padding: 2rem 0;
   }
-  .footer .copyright {
+  footer .top .follow a {
+    display: inline-block;
+    padding: 0 1rem;
+  }
+  footer .copyright {
     text-align: center;
   }
 }

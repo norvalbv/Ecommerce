@@ -3,7 +3,7 @@ import './footer.scss';
 
 export default function Footer() {
     return (
-        <div className="footer">
+        <footer>
             <div className="top">
                 <div className="desc">
                     <h3>About Us</h3>
@@ -38,6 +38,6 @@ export default function Footer() {
             <div className="bottom">
                 <p className="copyright">© 2021 | App designed by Benjamin Norval | All Rights Reserved</p>
             </div>
-        </div>
+        </footer>
     )
 }
