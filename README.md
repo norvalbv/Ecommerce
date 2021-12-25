@@ -8,6 +8,6 @@ I hard-coded half the design myself with some components encorporated from the M
 
 Screenshot:
 
-*soon*
+![E-commerce site landing page](./src/files/landingpage.png "E-commerce site")
 
 Various unit tests were carried out using Jest and Enzyme.
