@@ -60,53 +60,32 @@ html, body {
 }
 
 /* Misc */
-.newsletter {
-  margin: 2rem 0;
-  text-transform: capitalize;
+.products {
+  height: calc(100vh - 3rem);
 }
 
-.newsletter .text {
-  width: 80%;
-  height: 5rem;
-  background-color: #F1EEE5;
-  margin: auto;
+.products .product-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 5%;
 }
 
-.newsletter .text button {
-  padding: 0.6rem 0.9rem;
-  background-color: none;
-  border: 1px solid #9b9b9b;
-  border-radius: 5%;
-  cursor: pointer;
-  font-size: inherit;
+.products .product-container .image-section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
-.newsletter .text button:hover {
-  text-decoration: underline;
+.products .product-container .info-section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  margin: 0 auto;
+  background-color: lightcoral;
 }
 
-@media only screen and (max-width: 900px) {
-  .newsletter .text {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 10rem;
-    gap: 10%;
-    padding: 1rem 2rem;
-  }
-  .newsletter p {
-    text-align: center;
-  }
+.breadcrumb {
+  color: inherit;
 }
-/*# sourceMappingURL=newsletter.css.map */
+/*# sourceMappingURL=products.css.map */

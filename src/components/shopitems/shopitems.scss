@@ -59,3 +59,15 @@
         font-weight: bold;
     }
 }
+
+@media only screen and (max-width: 1000px) {
+    .shopitems {
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .shopitems {
+        grid-template: repeat(4, 1fr) / 1fr;
+    }
+}

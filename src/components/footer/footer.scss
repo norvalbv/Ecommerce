@@ -1,0 +1,105 @@
+@import '../../universal.scss';
+
+footer {
+    font-size: 12px !important;
+    background-color: $secondary-clr-1;
+    color: $primary-light;
+    padding: 0 1rem;
+    font-weight: 200;
+    
+    .top {
+        display: flex;
+        padding: 2rem 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 2;
+
+        h3 {
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .desc {
+            flex: 1;
+            
+            p {
+                width: 80%;
+                margin: auto;
+            }
+        }
+
+        .links {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            border-left: 1px solid $primary-light;
+            border-right: 1px solid $primary-light;
+            padding: 0 1rem;
+
+            li {
+                cursor: pointer;
+
+                &:hover {
+                    color: $primary-neutral;
+                }
+            }
+        }
+
+        .follow {
+            flex: 1;
+
+            a {
+                color: inherit;
+                display: block;
+
+                &:hover {
+                    color: $primary-neutral;
+                }
+            }
+            
+        }
+    }
+
+    .bottom {
+        padding: 2rem 0;
+        border-top: 1px solid $primary-light;
+    }
+}
+
+@media only screen and (max-width: 600px) { 
+
+    footer {
+
+        .top {
+            flex-direction: column;
+            padding: 0;
+            
+            .desc {
+                padding: 2rem 0;
+            }
+    
+            .links {
+                border-left: none;
+                border-right: none;
+                border-top: 1px solid $primary-light;
+                border-bottom: 1px solid $primary-light;
+                padding: 2rem 0;
+            }
+
+            .follow {
+                padding: 2rem 0;
+                
+                a {
+                    display: inline-block;
+                    padding: 0 1rem;
+                }
+            }
+        }
+    
+        .copyright {
+            text-align: center;
+        }
+    }
+}

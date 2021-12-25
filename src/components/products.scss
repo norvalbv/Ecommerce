@@ -1,0 +1,29 @@
+@import '../universal.scss';
+
+.products {
+    height: calc(100vh - 3rem);
+
+    button {
+        // width: 100px;
+        // height: 100px;
+    }
+
+    .product-container {
+        display: flex;
+
+        .image-section {
+            flex: 1;
+        }
+
+        .info-section {
+            flex: 1;
+            text-align: center;
+            margin: 0 auto;
+            background-color: lightcoral;
+        }
+    }
+}
+
+.breadcrumb {
+     color: inherit;
+}
