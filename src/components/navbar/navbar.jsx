@@ -32,10 +32,9 @@ export default function NavBar() {
                 </div>
             </div>
             <div className="middle">
-                <h1>B'e-commerce.</h1>
+                <h1><Link to="/" id="logo">B'e-commerce.</Link></h1>
             </div>
             <div className="right">
-                {/* <Link></Link> */}
                 <a href="#">REGISTER</a>
                 <a href="">LOGIN</a>
                 <ShoppingCartIcon fontSize='small' className='shop-icon'/>

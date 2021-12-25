@@ -63,4 +63,29 @@ html, body {
 .products {
   height: calc(100vh - 3rem);
 }
+
+.products .product-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.products .product-container .image-section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.products .product-container .info-section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  margin: 0 auto;
+  background-color: lightcoral;
+}
+
+.breadcrumb {
+  color: inherit;
+}
 /*# sourceMappingURL=products.css.map */

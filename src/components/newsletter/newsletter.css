@@ -97,7 +97,13 @@ html, body {
 
 @media only screen and (max-width: 900px) {
   .newsletter .text {
-    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 10rem;
+    gap: 10%;
+    padding: 1rem 2rem;
   }
   .newsletter p {
     text-align: center;
