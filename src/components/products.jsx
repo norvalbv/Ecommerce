@@ -1,11 +1,9 @@
 import './products.scss';
-import { Link } from 'react-router-dom';
-import Typography from '@mui/material/Typography';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
 
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ItemAccordion from './accordion';
+import BreadcrumbsComponent from './breadcrumbs';
 
 export default function Products() {
 
@@ -32,15 +30,7 @@ export default function Products() {
 
     return (
         <div className='products'>
-            <Breadcrumbs aria-label="breadcrumb">
-                <Link className='breadcrumb' to="/">
-                    MUI
-                </Link>
-                <Link className='breadcrumb' to="/">
-                    Core
-                </Link>
-                <Typography color="text.primary">Breadcrumbs</Typography>
-            </Breadcrumbs>
+            <BreadcrumbsComponent />
             <div className="product-container">
                 <div className="image-section">
                     {/* <ImageList sx={{ width: 500, height: 450 }} cols={1} rowHeight={164}>
