@@ -1,7 +1,7 @@
-import BreadcrumbsComponent from "../components/breadcrumbs";
-import NavBar from "../components/navbar/navbar";
-import ShopItems from "../components/shopitems/shopitems";
-import Footer from '../components/footer/footer';
+import BreadcrumbsComponent from "../../components/breadcrumbs";
+import NavBar from "../../components/navbar/navbar";
+import ShopItems from "../../components/shopitems/shopitems";
+import Footer from '../../components/footer/footer';
 import './categories.scss';
 
 export default function Categories() {

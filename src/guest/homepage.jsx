@@ -6,7 +6,7 @@ import Newsletter from '../components/newsletter/newsletter';
 import Footer from '../components/footer/footer';
 import Announcement from '../components/announcement/announcement';
 import HPCategories from '../components/hp-categories/hp-categories';
-import ModalComp from '../components/modal/modal';
+import ModalComp from '../components/modal';
 
 export default function HomePage() {
     return (
@@ -16,7 +16,6 @@ export default function HomePage() {
             <NavBar />
             <Intro />
             <ShopItems />
-            {/* <p style={'color: #fff'}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id obcaecati dignissimos incidunt perferendis facilis deleniti porro totam est, atque ullam iure exercitationem harum accusantium cupiditate.</p> */}
             <HPCategories />
             <Newsletter />
             <Footer />

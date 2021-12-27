@@ -3,8 +3,8 @@ import React, {useState} from 'react';
 
 // import ImageList from '@mui/material/ImageList';
 // import ImageListItem from '@mui/material/ImageListItem';
-import ItemAccordion from './accordion';
-import BreadcrumbsComponent from './breadcrumbs';
+import ItemAccordion from '../accordion';
+import BreadcrumbsComponent from '../breadcrumbs';
 
 export default function Products() {
 
