@@ -5,7 +5,7 @@ I hard-coded half the design myself with some components encorporated from the M
 I am currently learning back end and improving my testing skills and learning state management. This project is therefore, is still a work in progress and these new skills will be implemented accordingly. See below for a upcoming roadmap.
 
 To get started use: yarn start
-or visit: (live link coming soon).
+or visit: https://benjamin-ecommerce-demo.netlify.app/
 
 
 Screenshots:
