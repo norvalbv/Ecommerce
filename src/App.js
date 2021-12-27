@@ -1,10 +1,10 @@
 import React from 'react';
 import {BrowserRouter as Routers, Routes, Route} from 'react-router-dom';
 import HomePage from './guest/homepage';
-import Login from './guest/login';
+import Login from './guest/login/login';
 import ProductPage from './guest/productpage';
-import Register from './guest/register';
-import Categories from './guest/categories';
+import Register from './guest/register/register';
+import Categories from './guest/categories/categories';
 
 function App() {
   return (

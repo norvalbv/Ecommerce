@@ -38,8 +38,8 @@ export default function NavBar() {
             </div>
             <div className="right">
                 <Link to='/categories'>Products</Link>
-                <Link to='/'>REGISTER</Link>
-                <Link to='/'>LOGIN</Link>
+                <Link to='/register'>REGISTER</Link>
+                <Link to='/login'>LOGIN</Link>
                 <ShoppingCartIcon fontSize='small' className='shop-icon'/>
                 <p id='num'>{num}</p>
             </div>
