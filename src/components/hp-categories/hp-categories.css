@@ -71,48 +71,27 @@ html, body {
 
 .hp-categories .left {
   background-image: url("../../files/landscape-img.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  border: 2px solid #F1EEE5;
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.hp-categories .left h2 {
-  font-size: 1.5rem;
-  margin: 1rem 0;
-}
-
-.hp-categories .left .view-more {
-  padding: 0.25rem 0.5rem;
-  border: 1px solid #333333;
-  color: #9b9b9b;
-  text-decoration: none;
 }
 
 .hp-categories .right {
+  background-image: url("../../files/landscape-img2.jpg");
+}
+
+.hp-categories .left, .hp-categories .right {
+  background-repeat: no-repeat;
+  background-size: cover;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-image: url("../../files/landscape-img.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   border: 2px solid #F1EEE5;
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -121,12 +100,12 @@ html, body {
           align-items: flex-end;
 }
 
-.hp-categories .right h2 {
+.hp-categories .left h2, .hp-categories .right h2 {
   font-size: 1.5rem;
   margin: 1rem 0;
 }
 
-.hp-categories .right .view-more {
+.hp-categories .left .view-more, .hp-categories .right .view-more {
   padding: 0.25rem 0.5rem;
   border: 1px solid #333333;
   color: #9b9b9b;
@@ -140,12 +119,6 @@ html, body {
         -ms-flex-direction: column;
             flex-direction: column;
     height: 100vh;
-  }
-  .hp-categories .left, .hp-categories .right {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 }
 /*# sourceMappingURL=hp-categories.css.map */

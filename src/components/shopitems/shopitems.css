@@ -113,7 +113,7 @@ html, body {
   cursor: pointer;
 }
 
-.overlay button {
+.overlay .similar-btn {
   border: none;
   background-color: #9b9b9b;
   border: 1px solid #333333;
@@ -128,6 +128,11 @@ html, body {
   font-size: 10px;
   color: #333333;
   font-weight: bold;
+  text-decoration: none;
+}
+
+.search-icon {
+  color: inherit;
 }
 
 @media only screen and (max-width: 1000px) {

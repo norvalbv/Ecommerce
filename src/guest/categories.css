@@ -60,60 +60,44 @@ html, body {
 }
 
 /* Misc */
-.newsletter {
-  margin: 2rem 0;
-  text-transform: capitalize;
+.categories {
+  color: #333333;
 }
 
-.newsletter .text {
-  width: 80%;
-  height: 15rem;
-  background-color: #F1EEE5;
-  margin: auto;
+.categories h2 {
+  margin: 1rem;
+  font-size: 1.75rem;
+}
+
+.categories .filters {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 10%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  margin: 1rem;
 }
 
-.newsletter .text input[type=text] {
-  background: none;
-  border: none;
-  border-bottom: 1px solid #9b9b9b;
-  text-align: center;
-  padding: 1rem 0;
-  width: 20rem;
+.categories .filter-left, .categories .filter-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
 }
 
-.newsletter .text input[type=text]:focus {
-  outline: none;
+.categories .filter-left select, .categories .filter-right select {
+  width: 3rem;
 }
 
-.newsletter .text button {
-  padding: 0.6rem 0.9rem;
-  background-color: none;
-  border: 1px solid #9b9b9b;
-  border-radius: 5%;
-  cursor: pointer;
-  font-size: 14px;
-  letter-spacing: 1px;
+.categories .filter-left #color, .categories .filter-right #color {
+  width: 4rem;
 }
 
-.newsletter .text button:hover {
-  text-decoration: underline;
+.categories .filter-left #sort, .categories .filter-right #sort {
+  width: 6rem;
 }
-
-.active {
-  display: none;
-}
-/*# sourceMappingURL=newsletter.css.map */
+/*# sourceMappingURL=categories.css.map */

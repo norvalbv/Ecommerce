@@ -52,6 +52,7 @@
         display: flex;
         align-items: center;
         gap: 2rem;
+        position: relative;
 
         a {
             color: inherit;
@@ -60,6 +61,14 @@
 
         .shop-icon {
             cursor: pointer;
+        }
+
+        #num {
+            position: absolute;
+            right: -0.3rem;
+            top: 0.6rem;
+            color: $primary-neutral;
+            font-weight: bold;
         }
     }
 }

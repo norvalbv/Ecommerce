@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
@@ -19,15 +19,6 @@ export default function ModalComp() {
 
     const [open, setOpen] = useState(true);
     const handleClose = () => setOpen(() => !open);
-
-    useEffect(() => {
-        const modalTimer = setTimeout(() => {
-            setOpen(() => !open)
-        }, 7500)
-        return () => {
-            clearInterval(modalTimer);
-        }
-    }, [])
 
     return (
       <div>

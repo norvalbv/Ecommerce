@@ -43,7 +43,7 @@
         cursor: pointer;
     }
 
-    button {
+    .similar-btn {
         border: none;
         background-color: $primary-neutral;
         border: 1px solid $primary-dark;
@@ -57,7 +57,12 @@
         font-size: 10px;
         color: $primary-dark;
         font-weight: bold;
+        text-decoration: none;
     }
+}
+
+.search-icon {
+    color: inherit;
 }
 
 @media only screen and (max-width: 1000px) {

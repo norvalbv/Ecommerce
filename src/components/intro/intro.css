@@ -108,7 +108,7 @@ html, body {
   margin: 1rem 0;
 }
 
-.intro .text-section button {
+.intro .text-section .intro-button {
   background: none;
   padding: 0.75rem 1rem;
   letter-spacing: 2px;
@@ -122,9 +122,11 @@ html, body {
           align-items: center;
   -webkit-box-shadow: 2px 2px 2px #333333;
           box-shadow: 2px 2px 2px #333333;
+  color: inherit;
+  width: 7.5rem;
 }
 
-.intro .text-section button:hover {
+.intro .text-section .intro-button:hover {
   text-decoration: underline;
 }
 
