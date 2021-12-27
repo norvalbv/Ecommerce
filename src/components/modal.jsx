@@ -29,13 +29,20 @@ export default function ModalComp() {
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-          <button onClick={handleClose}>Close</button>
+          <button onClick={handleClose} style={{position: 'absolute', right: '1rem', top: '1rem', cursor: 'pointer'}}>Close</button>
 
             <Typography id="modal-modal-title" variant="h6" component="h2">
               Please note:
+              <hr />
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                 Some of the pages on this site have not been coded intentionally, i.e., those displayed in the footer.
+                <br />
+                <br />
+                Currently the images have been manually imported. Etsy API will soon be implemented to handle this.
+                <br />
+                <br />
+                Check out the roadmap for the upcoming features of the site in the README
             </Typography>
           </Box>
         </Modal>

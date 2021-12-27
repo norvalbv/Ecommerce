@@ -60,15 +60,19 @@ html, body {
 }
 
 /* Misc */
+.container {
+  background-color: #fff;
+  position: relative;
+  height: auto;
+}
+
 .shopitems {
   display: -ms-inline-grid;
   display: inline-grid;
   -ms-grid-rows: 1fr;
   -ms-grid-columns: (1fr)[4];
       grid-template: 1fr/repeat(4, 1fr);
-  height: auto;
   gap: 10px;
-  background-color: #fff;
 }
 
 .shopitems .itemContainer {
@@ -136,18 +140,24 @@ html, body {
 }
 
 @media only screen and (max-width: 1000px) {
-  .shopitems {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .shopitems {
     -ms-grid-rows: (1fr)[2];
     -ms-grid-columns: (1fr)[2];
         grid-template: repeat(2, 1fr)/repeat(2, 1fr);
   }
-}
-
-@media only screen and (max-width: 550px) {
-  .shopitems {
-    -ms-grid-rows: (1fr)[4];
-    -ms-grid-columns: 1fr;
-        grid-template: repeat(4, 1fr)/1fr;
+  .container .shopitems .itemContainer {
+    height: 50vh;
+  }
+  .container .shopitems .itemContainer .item-image {
+    height: 100%;
   }
 }
 /*# sourceMappingURL=shopitems.css.map */

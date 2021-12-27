@@ -3,8 +3,9 @@ import slide2img from '../../files/slide-2.jpg';
 import slide3img from '../../files/slide-3.jpg';
 
 import landscapeslide1 from '../../files/landscape-slide-1.jpg';
-import landscapeslide2 from '../../files/landscape-slide-2.jpg';
-import landscapeslide3 from '../../files/landscape-slide-3.jpg';
+import landscapeslide2 from '../../files/landscape-slide-3.jpg';
+import landscapeslide3 from '../../files/landscape-slide-4.jpg';
+
 import './intro.scss';
 
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';

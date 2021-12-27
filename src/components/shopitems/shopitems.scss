@@ -1,11 +1,14 @@
 @import '../../universal.scss';
 
+.container {
+    background-color: #fff;
+    position: relative;
+    height: auto;
+}
 .shopitems {
     display: inline-grid;
     grid-template: 1fr / repeat(4, 1fr);
-    height: auto;
     gap: 10px;
-    background-color: #fff;
 
     .itemContainer {
         background-color: $primary-light;
@@ -66,13 +69,19 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    .shopitems {
-        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    }
-}
 
-@media only screen and (max-width: 550px) {
-    .shopitems {
-        grid-template: repeat(4, 1fr) / 1fr;
+    .container {
+        display: flex;
+        justify-content: center;
+        .shopitems {
+            grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+            .itemContainer {
+                height: 50vh;
+    
+                .item-image {
+                    height: 100%;
+                }
+            }
+        }
     }
 }
