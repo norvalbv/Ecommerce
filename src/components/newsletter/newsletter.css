@@ -92,7 +92,8 @@ html, body {
   border-bottom: 1px solid #9b9b9b;
   text-align: center;
   padding: 1rem 0;
-  width: 20rem;
+  min-width: 15rem;
+  max-width: 20rem;
 }
 
 .newsletter .text input[type=text]:focus {
@@ -115,5 +116,12 @@ html, body {
 
 .active {
   display: none;
+}
+
+@media only screen and (max-width: 750px) {
+  .newsletter .text #newsletter {
+    text-align: center;
+    padding: 0 1rem;
+  }
 }
 /*# sourceMappingURL=newsletter.css.map */

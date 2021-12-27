@@ -156,14 +156,21 @@ html, body {
             flex-direction: column;
     -ms-flex-line-pack: center;
         align-content: center;
+    height: 90vh;
   }
   .intro .image-section .portrait-homepage-image {
     display: none;
   }
   .intro .image-section .landscape-homepage-image {
     display: block;
+    height: 45vh;
     width: 100%;
-    height: auto;
+  }
+  .intro .slide1 {
+    background-color: #F1EEE5;
+  }
+  .intro .slide2, .intro .slide3 {
+    background-color: #ffffff;
   }
   .intro .text-section {
     text-align: center;
@@ -172,6 +179,9 @@ html, body {
   }
   .intro .text-section p {
     margin: 1rem 0;
+  }
+  .intro .text-section .intro-button {
+    margin: 0.5rem auto;
   }
 }
 /*# sourceMappingURL=intro.css.map */
