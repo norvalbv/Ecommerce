@@ -166,12 +166,6 @@ html, body {
     height: 45vh;
     width: 100%;
   }
-  .intro .slide1 {
-    background-color: #F1EEE5;
-  }
-  .intro .slide2, .intro .slide3 {
-    background-color: #ffffff;
-  }
   .intro .text-section {
     text-align: center;
     width: 90%;
@@ -182,6 +176,12 @@ html, body {
   }
   .intro .text-section .intro-button {
     margin: 0.5rem auto;
+  }
+  .slide1 {
+    background-color: #F1EEE5;
+  }
+  .slide2, .slide3 {
+    background-color: #fff;
   }
 }
 /*# sourceMappingURL=intro.css.map */

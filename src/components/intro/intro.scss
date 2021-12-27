@@ -98,14 +98,6 @@
             }
         }
 
-        .slide1 {
-            background-color: $primary-light;
-        }
-        
-        .slide2, .slide3 {
-            background-color: #ffffff;
-        }
-
         .text-section {
             text-align: center;
             width: 90%;
@@ -118,5 +110,14 @@
                 margin: 0.5rem auto;
             }
         }
+    }
+
+    
+    .slide1 {
+        background-color: $primary-light;
+    }
+    
+    .slide2, .slide3 {
+        background-color: #fff;
     }
 }

@@ -10,7 +10,14 @@ or visit: (live link coming soon).
 
 Screenshots:
 
-![E-commerce site landing page](./src/files/landingpage.png "E-commerce site")
+Desktop:
+
+![E-commerce site landing page for desktop](./src/files/landingpage.png "E-commerce site")
+
+
+Mobile:
+
+![E-commerce site landing page for mobile](./src/files/landingpage-mobile.png "E-commerce site")
 
 
 Front end design (completed | 27/12/2021)
