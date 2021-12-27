@@ -22,10 +22,10 @@ Mobile:
 
 Front end design (completed | 27/12/2021)
 
-Functionality of site, i.e., adding item to basket. (goal | 02/01/2021)
+Functionality of site, i.e., adding item to basket. (goal | 02/01/2022)
 
-Implement the Etsy API to allow for real products and descriptions. (goal | 10/01/2021)
+Implement the Etsy API to allow for real products and descriptions. (goal | 10/01/2022)
 
-Implement tests with Enzyme and Jest (goal | 15/01/2021)
+Implement tests with Enzyme and Jest (goal | 15/01/2022)
 
 more to be added...
