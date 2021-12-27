@@ -60,6 +60,10 @@ html, body {
 }
 
 /* Misc */
+.nav {
+  position: relative;
+}
+
 .navbar {
   height: 10vh;
   font-size: 14px;
@@ -84,6 +88,10 @@ html, body {
   -webkit-box-flex: 100%;
       -ms-flex: 100%;
           flex: 100%;
+}
+
+.navbar .left #hamburger-icon {
+  display: none;
 }
 
 .navbar .left .search {
@@ -150,5 +158,87 @@ html, body {
   top: 0.6rem;
   color: #9b9b9b;
   font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  z-index: 1;
+  width: 45vw;
+  height: 75vh;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  background-color: #333333;
+  padding-left: 2rem;
+  border: 1px solid #F1EEE5;
+  color: #F1EEE5;
+}
+
+.hamburger ul li {
+  margin: 2rem 0;
+  cursor: pointer;
+}
+
+.hamburger ul li:hover {
+  text-decoration: underline;
+}
+
+.hamburger ul li .link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+#account-btn {
+  display: none;
+}
+
+.ham-active {
+  display: block;
+}
+
+.account-dropdown {
+  display: none;
+  z-index: 10;
+  position: absolute;
+  top: 4vh;
+  right: 3vh;
+  background-color: #333333;
+  color: #F1EEE5;
+  padding: 0.4rem 0.8rem;
+}
+
+.account-dropdown li {
+  margin: 0.5rem 0;
+}
+
+.account-active {
+  display: block;
+}
+
+@media only screen and (max-width: 750px) {
+  .navbar .left {
+    display: none;
+  }
+  .navbar .left .lang {
+    display: none;
+  }
+  .navbar .left .search {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .navbar .left {
+    display: block;
+  }
+  .navbar .left #hamburger-icon {
+    display: block;
+  }
+  .navbar .right .right-nav {
+    display: none;
+  }
+  .navbar .right #account-btn {
+    display: block;
+  }
 }
 /*# sourceMappingURL=navbar.css.map */
