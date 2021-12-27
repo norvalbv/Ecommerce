@@ -6,10 +6,12 @@ import Newsletter from '../components/newsletter/newsletter';
 import Footer from '../components/footer/footer';
 import Announcement from '../components/announcement/announcement';
 import HPCategories from '../components/hp-categories/hp-categories';
+import ModalComp from '../components/modal/modal';
 
 export default function HomePage() {
     return (
         <div>
+            <ModalComp />
             <Announcement />
             <NavBar />
             <Intro />

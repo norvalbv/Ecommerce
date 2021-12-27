@@ -9,6 +9,8 @@ import './intro.scss';
 
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
+import { Link } from 'react-router-dom';
+
 export const Slide1 = () => {
     return (
     <div className="intro">
@@ -19,9 +21,8 @@ export const Slide1 = () => {
         <div className="text-section">
             <h2>Summer Sale</h2>
             <p>Don't compromise on style! Shop 30% off a selected range</p>
-            <button>Shop Now
-            <ArrowRightIcon  fontSize="small" />
-            </button>
+            <Link to='/categories' className='intro-button'>Shop Now
+            <ArrowRightIcon  fontSize="small" /></Link>
         </div>
     </div>
     )
@@ -37,9 +38,8 @@ export const Slide2 = () => {
         <div className="text-section">
             <h2>View The Latest Collection</h2>
             <p>Introducing SS21</p>
-            <button>Shop Now
-            <ArrowRightIcon  fontSize="small" />
-            </button>
+            <Link to='/categories' className='intro-button'>Shop Now
+            <ArrowRightIcon  fontSize="small" /></Link>
         </div>
     </div>
     )
@@ -55,9 +55,8 @@ export const Slide3 = () => {
         <div className="text-section">
             <h2>View the latest trends</h2>
             <p>Shop our best sellers</p>
-            <button>Shop Now
-            <ArrowRightIcon  fontSize="small" />
-            </button>
+            <Link to='/categories' className='intro-button'>Shop Now
+            <ArrowRightIcon  fontSize="small" /></Link>
         </div>
     </div>
     )

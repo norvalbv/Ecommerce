@@ -132,6 +132,7 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
+  position: relative;
 }
 
 .navbar .right a {
@@ -141,5 +142,13 @@ html, body {
 
 .navbar .right .shop-icon {
   cursor: pointer;
+}
+
+.navbar .right #num {
+  position: absolute;
+  right: -0.3rem;
+  top: 0.6rem;
+  color: #9b9b9b;
+  font-weight: bold;
 }
 /*# sourceMappingURL=navbar.css.map */

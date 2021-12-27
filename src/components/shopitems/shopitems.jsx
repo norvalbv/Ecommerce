@@ -7,6 +7,8 @@ import img5 from '../../files/landscape-slide-2.jpg';
 import img6 from '../../files/landscape-slide-3.jpg';
 import './shopitems.scss';
 
+import { Link } from 'react-router-dom';
+
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
@@ -25,8 +27,8 @@ export default function ShopItems() {
                 <img src={image} alt="#" className="item-image"
                 />
                 <div className="overlay">
-                    <SearchIcon fontSize="large" className="icon"/>
-                    <button>View Similar</button>
+                    <Link to='/' className='search-icon'><SearchIcon fontSize="large" className="icon"/></Link>
+                    <Link to='/categories' className='similar-btn'>View Similar</Link>
                     <ShoppingBasketIcon fontSize="large" className="icon"/>
                 </div>
             </div>
@@ -35,8 +37,8 @@ export default function ShopItems() {
                 onMouseOut={() => setImage2(img3)}>
                 <img src={image2} alt="#" className="item-image"/>
                 <div className="overlay">
-                    <SearchIcon fontSize="large" className="icon"/>
-                    <button>View Similar</button>
+                    <Link to='/' className='search-icon'><SearchIcon fontSize="large" className="icon"/></Link>
+                    <Link to='/categories' className='similar-btn'>View Similar</Link>
                     <ShoppingBasketIcon fontSize="large" className="icon"/>
                 </div>
             </div>
@@ -45,8 +47,8 @@ export default function ShopItems() {
                 onMouseOut={() => setImage3(img5)}>
                 <img src={image3} alt="#" className="item-image"/>
                 <div className="overlay">
-                    <SearchIcon fontSize="large" className="icon"/>
-                    <button>View Similar</button>
+                    <Link to='/' className='search-icon'><SearchIcon fontSize="large" className="icon"/></Link>
+                    <Link to='/categories' className='similar-btn'>View Similar</Link>
                     <ShoppingBasketIcon fontSize="large" className="icon"/>
                 </div>
             </div>
@@ -55,8 +57,8 @@ export default function ShopItems() {
                 onMouseOut={() => setImage(img)}>
                 <img src={image} alt="#" className="item-image"/>
                 <div className="overlay">
-                    <SearchIcon fontSize="large" className="icon"/>
-                    <button>View Similar</button>
+                    <Link to='/' className='search-icon'><SearchIcon fontSize="large" className="icon"/></Link>
+                    <Link to='/categories' className='similar-btn'>View Similar</Link>
                     <ShoppingBasketIcon fontSize="large" className="icon"/>
                 </div>
             </div>

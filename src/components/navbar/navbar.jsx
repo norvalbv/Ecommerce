@@ -8,6 +8,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 
 export default function NavBar() {
+    
+    let num = 2;
 
     return (
         <div className="navbar">
@@ -35,9 +37,11 @@ export default function NavBar() {
                 <h1><Link to="/" id="logo">B'e-commerce.</Link></h1>
             </div>
             <div className="right">
-                <a href="#">REGISTER</a>
-                <a href="">LOGIN</a>
+                <Link to='/categories'>Products</Link>
+                <Link to='/'>REGISTER</Link>
+                <Link to='/'>LOGIN</Link>
                 <ShoppingCartIcon fontSize='small' className='shop-icon'/>
+                <p id='num'>{num}</p>
             </div>
         </div>
     )

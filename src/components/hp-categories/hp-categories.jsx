@@ -5,11 +5,11 @@ export default function HPCategories() {
     return (
         <div className='hp-categories'>
             <div className="left">
-                <h2>Lorem, ipsum.</h2>
+                <h2>View products</h2>
                 <Link className="view-more" to='/'>View More</Link>
             </div>
             <div className="right">
-                <h2>Lorem, ipsum.</h2>
+                <h2>View products</h2>
                 <Link className="view-more" to='/'>View More</Link>
             </div>
         </div>
