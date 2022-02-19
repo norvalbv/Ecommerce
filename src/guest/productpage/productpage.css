@@ -60,88 +60,44 @@ html, body {
 }
 
 /* Misc */
-.products {
-  height: calc(100vh - 3rem);
+.categories-inner-container {
+  color: #333333;
 }
 
-.breadcrumb {
-  color: inherit;
+.categories-inner-container h2 {
+  margin: 1rem;
+  font-size: 1.75rem;
 }
 
-.product-container {
+.categories-inner-container .filters {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 5rem;
-}
-
-.product-image {
-  height: 30rem;
-  width: 25rem;
-}
-
-.product {
-  padding: 5rem 5rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1rem;
+  margin: 1rem;
 }
 
-.product .product-title {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-decoration: underline;
+.categories-inner-container .filter-left, .categories-inner-container .filter-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
 }
 
-.product .product-info-section .product-desc-title {
-  font-size: 1rem;
-  text-decoration: underline;
+.categories-inner-container .filter-left select, .categories-inner-container .filter-right select {
+  width: 3rem;
 }
 
-.product .product-info-section .product-desc {
-  font-size: 1rem;
-  margin: 1rem 0;
+.categories-inner-container .filter-left #color, .categories-inner-container .filter-right #color {
+  width: 4rem;
 }
 
-.product .product-info-section .cart-buttons {
-  width: 9rem;
-  height: 2.5rem;
-  cursor: pointer;
-  margin-right: 1rem;
+.categories-inner-container .filter-left #sort, .categories-inner-container .filter-right #sort {
+  width: 6rem;
 }
-
-@media only screen and (max-width: 925px) {
-  .product-container {
-    padding: 0 5rem 0 0;
-  }
-  .product {
-    padding: 5rem 0 0;
-  }
-}
-
-@media only screen and (max-width: 575px) {
-  .product-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 0;
-    margin-bottom: 2.5rem;
-  }
-  .product-container .product-image {
-    max-width: 100%;
-  }
-  .product {
-    padding: 0 2.5rem;
-  }
-}
-/*# sourceMappingURL=products.css.map */
+/*# sourceMappingURL=productpage.css.map */
