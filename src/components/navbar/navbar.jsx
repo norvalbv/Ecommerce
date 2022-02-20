@@ -1,6 +1,6 @@
 import "./navbar.scss";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FormControl from "@mui/material/FormControl";
@@ -26,6 +26,7 @@ export default function NavBar() {
     setAccountActive(!accountActive);
   };
 
+  const location = useLocation();
 
   return (
     <div className="nav">
@@ -59,14 +60,19 @@ export default function NavBar() {
           </h1>
         </div>
         <div className="right">
+          {location.pathname !== "/" && (
+            <Link to="/" className="right-nav">
+              Home
+            </Link>
+          )}
           <Link to="/categories" className="right-nav">
             Categories
           </Link>
           <Link to="/register" className="right-nav">
-            REGISTER
+            Register
           </Link>
           <Link to="/login" className="right-nav">
-            LOGIN
+            Login
           </Link>
           <AccountCircleIcon id="account-btn" onClick={accountClick} />
           <ul
@@ -83,7 +89,9 @@ export default function NavBar() {
               <Link to="/login">Login</Link>
             </li>
           </ul>
-          <ShoppingCartIcon fontSize="small" className="shop-icon" />
+          <Link to="/cart" className="link">
+            <ShoppingCartIcon fontSize="small" className="shop-icon" />
+          </Link>
           <p id="num">{cart.quantity}</p>
         </div>
       </div>
@@ -91,6 +99,13 @@ export default function NavBar() {
         className={hamActive === true ? "hamburger ham-active" : "hamburger"}
       >
         <ul>
+          {location.pathname !== "/" && (
+            <li>
+              <Link to="/" className="link">
+                Home
+              </Link>
+            </li>
+          )}
           <li>
             <Link to="/categories" className="link">
               Categories
