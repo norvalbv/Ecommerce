@@ -135,11 +135,11 @@ html, body {
 }
 
 .slide2 {
-  background-color: #EEF6F8;
+  background-color: #eef6f8;
 }
 
 .slide3 {
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
 }
 
 @media only screen and (max-width: 750px) {
@@ -180,7 +180,8 @@ html, body {
   .slide1 {
     background-color: #F1EEE5;
   }
-  .slide2, .slide3 {
+  .slide2,
+  .slide3 {
     background-color: #fff;
   }
 }

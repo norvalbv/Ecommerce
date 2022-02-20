@@ -215,7 +215,7 @@ html, body {
   display: block;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 800px) {
   .navbar .left {
     display: none;
   }
@@ -227,7 +227,7 @@ html, body {
   }
 }
 
-@media only screen and (max-width: 475px) {
+@media only screen and (max-width: 550px) {
   .navbar .left {
     display: block;
   }

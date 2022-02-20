@@ -6,6 +6,7 @@ import ProductPage from "../guest/productpage/productpage";
 import Register from "../guest/register/register";
 import Categories from "../guest/categories/categories";
 import Products from "../components/products/products";
+import { Cart } from "../guest/cart/cart";
 
 function App() {
   const [info, setInfo] = useState(null);
@@ -49,6 +50,7 @@ function App() {
         <Route path="products" element={<Products />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/cart" element={<Cart />}></Route>
       </Routes>
     </Routers>
   );

@@ -1,10 +1,5 @@
 @import "../../universal.scss";
 
-// .MuiMenuItem-root, .MuiMenuItem-root, .MuiFormControl-fullWidth {
-//     font-size: 12px;
-//     background-color: #000;
-// }
-
 .nav {
   position: relative;
 }
@@ -138,7 +133,7 @@
   display: block;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 800px) {
   .navbar {
     .left {
       display: none;
@@ -152,7 +147,7 @@
   }
 }
 
-@media only screen and (max-width: 475px) {
+@media only screen and (max-width: 550px) {
   .navbar {
     .left {
       display: block;

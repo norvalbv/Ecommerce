@@ -64,7 +64,7 @@ export default function Products({ info }) {
           </div>
         </div>
       </div>
-      <div style={{width: '75%', margin: '0 auto 3rem'}}>
+      <div style={{ width: "75%", margin: "0 auto 3rem" }}>
         <ItemAccordion />
       </div>
       <Footer />
