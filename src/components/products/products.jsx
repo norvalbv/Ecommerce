@@ -3,9 +3,10 @@ import NavBar from "../navbar/navbar";
 import { useDispatch } from "react-redux";
 import ItemAccordion from "../accordion";
 import BreadcrumbsComponent from "../breadcrumbs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import imgg from "../../files/705tee.jpg";
 import Footer from "../footer/footer";
+import { Loading } from "../loading";
 
 export default function Products({ info }) {
   const [product, setProduct] = useState({});
@@ -18,52 +19,45 @@ export default function Products({ info }) {
     dispatch({ type: "addProduct" });
   };
 
-  console.log(info);
+  if (!info) {
+    return <Loading />;
+  }
 
   return (
     <div className="products">
       <NavBar />
       <BreadcrumbsComponent />
-      {/* {info.map((item) => (
-        <div className="product-container">
-          <h2>{item.name}</h2>
+      {info.map(({id, name, imageURL }) => (
+        <div className="product-container" key={id}>
           <img
-            src={item.imageURL}
-            alt={[item.name, "display image"].join(" ")}
+            src={imageURL}
+            alt={[name, "display image"].join(" ")}
+            className="product-image"
           />
-          <p id="price">{item.price.current.text}</p>
-          <div id="product-desc">
-            <h2>Product Description</h2>
-            <p>{item.desc}</p>
+          <div className="product">
+            <h2 className="product-title">{name}</h2>
+            <p id="price">£25</p>
+            <div className="product-info-section">
+              <h3 className="product-desc-title">Product Description</h3>
+              <p className="product-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto
+                corporis eius, sit voluptatem quis a saepe aperiam minus optio
+                nisi quod perferendis cum voluptates sed!
+              </p>
+              <p style={{ fontSize: "0.75rem" }}>Size:</p>
+              <select name="size" className="cart-buttons">
+                <option value="size">S</option>
+                <option value="size">M</option>
+                <option value="size">L</option>
+                <option value="size">XL</option>
+              </select>
+              <button onClick={handleClick} className="cart-buttons">
+                add to cart
+              </button>
+            </div>
           </div>
         </div>
-      ))}; */}
-
-      <div className="product-container">
-        <img src={imgg} alt="d" className="product-image" />
-        <div className="product">
-          <h2 className="product-title">Sweater</h2>
-          <p id="price">£25</p>
-          <div className="product-info-section">
-            <h3 className="product-desc-title">Product Description</h3>
-            <p className="product-desc">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto
-              corporis eius, sit voluptatem quis a saepe aperiam minus optio
-              nisi quod perferendis cum voluptates sed!
-            </p>
-            <p style={{ fontSize: "0.75rem" }}>Size:</p>
-            <select name="size" className="cart-buttons">
-              <option value="size">S</option>
-              <option value="size">M</option>
-              <option value="size">L</option>
-              <option value="size">XL</option>
-            </select>
-            <button onClick={handleClick} className="cart-buttons">
-              add to cart
-            </button>
-          </div>
-        </div>
-      </div>
+      ))}
       <div style={{ width: "75%", margin: "0 auto 3rem" }}>
         <ItemAccordion />
       </div>

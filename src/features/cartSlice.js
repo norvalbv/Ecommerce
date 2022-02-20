@@ -43,8 +43,8 @@ const initialState = {
       },
     },
   ],
-  quantity: 1,
-  totalPrice: 0,
+  quantity: 3,
+  totalPrice: 40.19,
 };
 
 export const cartSlice = (state = initialState, action) => {
@@ -58,6 +58,7 @@ export const cartSlice = (state = initialState, action) => {
       return {
         ...state,
         quantity: state.quantity - 1,
+        products: state.products.filter((item) => item !== action.payload)
       };
     default:
       return state;

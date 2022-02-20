@@ -11,32 +11,27 @@ import { Cart } from "../guest/cart/cart";
 function App() {
   const [info, setInfo] = useState(null);
 
-  // useEffect(() => {
-  //   (async () => {
-  //     try {
-  //       const data = await fetch(
-  //         "https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&country=US&sort=freshness&currency=USD&sizeSchema=US&lang=en-US",
-  //         {
-  //           method: "GET",
-  //           headers: {
-  //             "x-rapidapi-host": "asos2.p.rapidapi.com",
-  //             "x-rapidapi-key":
-  //               "dffcc5f24emsh89532c7a5575c02p168eddjsn47c9716293e9",
-  //           },
-  //         }
-  //       );
-  //       const response = await data.json();
-  //       setInfo(response.products);
-  //       console.log(response.products);
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //   })();
-  // }, []);
-
   useEffect(() => {
-    console.log(info);
-  }, [info]);
+    (async () => {
+      try {
+        const data = await fetch(
+          "https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&country=US&sort=freshness&currency=USD&sizeSchema=US&lang=en-US",
+          {
+            method: "GET",
+            headers: {
+              "x-rapidapi-host": "asos2.p.rapidapi.com",
+              "x-rapidapi-key":
+                "dffcc5f24emsh89532c7a5575c02p168eddjsn47c9716293e9",
+            },
+          }
+        );
+        const response = await data.json();
+        setInfo(response.products);
+      } catch (err) {
+        console.error(err);
+      }
+    })();
+  }, []);
 
   return (
     <Routers>
@@ -47,7 +42,7 @@ function App() {
           path="/productpage"
           element={<ProductPage info={info} />}
         ></Route>
-        <Route path="products" element={<Products />}></Route>
+        <Route path="products" element={<Products info={info} />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
