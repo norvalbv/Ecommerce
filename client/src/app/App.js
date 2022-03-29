@@ -7,6 +7,7 @@ import Register from "../guest/register/register";
 import Categories from "../guest/categories/categories";
 import Products from "../components/products/products";
 import { Cart } from "../guest/cart/cart";
+import { MyAccount } from "../guest/myaccount/myaccount";
 
 function App() {
   const [info, setInfo] = useState(null);
@@ -26,6 +27,7 @@ function App() {
           }
         );
         const response = await data.json();
+        console.log(response);
         setInfo(response.products);
       } catch (err) {
         console.error(err);
@@ -42,10 +44,11 @@ function App() {
           path="/productpage"
           element={<ProductPage info={info} />}
         ></Route>
-        <Route path="products" element={<Products info={info} />}></Route>
+        <Route path="/products" element={<Products info={info} />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/myaccount" element={<MyAccount />}></Route>
       </Routes>
     </Routers>
   );
