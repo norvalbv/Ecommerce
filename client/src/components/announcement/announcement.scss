@@ -1,0 +1,14 @@
+@import "../../universal.scss";
+
+.announcement {
+  height: 2rem;
+  background-color: $primary-dark;
+  border-bottom: 1px solid $primary-neutral;
+  text-align: center;
+  color: $primary-light;
+  text-transform: uppercase;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

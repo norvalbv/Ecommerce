@@ -1,0 +1,33 @@
+@import '../../universal.scss';
+
+.categories-inner-container {
+    color: $primary-dark;
+
+    h2 {
+        margin: 1rem;
+        font-size: 1.75rem;
+    }
+
+    .filters {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem;
+    }
+    .filter-left, .filter-right {
+        display: flex;
+        gap: 0.5rem;
+        
+        select {
+            width: 3rem;
+        }
+
+        #color {
+            width: 4rem;
+        }
+
+        #sort {
+            width: 6rem;
+        }
+    }
+}

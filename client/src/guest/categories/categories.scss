@@ -1,0 +1,57 @@
+@import "../../universal.scss";
+
+.categories {
+  color: $primary-dark;
+
+  h2 {
+    margin: 1rem;
+    font-size: 1.75rem;
+  }
+
+  .categories-inner-container {
+    margin: $component-margin;
+    height: 50vh;
+    display: flex;
+    color: $primary-dark;
+
+    .left {
+      background-image: url("../../files/landscape-img.jpg");
+    }
+
+    .right {
+      background-image: url("../../files/landscape-img2.jpg");
+    }
+
+    .left,
+    .right {
+      background-repeat: no-repeat;
+      background-size: cover;
+      flex: 1;
+      border: 2px solid $primary-light;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      h2 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+      }
+
+      .view-more {
+        padding: 0.25rem 0.5rem;
+        border: 1px solid $primary-dark;
+        color: $primary-neutral;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .categories-inner-container {
+    flex-direction: column;
+    height: 100vh;
+  }
+}
