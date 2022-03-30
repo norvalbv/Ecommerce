@@ -102,11 +102,13 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1rem;
+  gap: 40%;
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 .overlay:hover {
@@ -115,24 +117,6 @@ html, body {
 
 .overlay .icon {
   cursor: pointer;
-}
-
-.overlay .similar-btn {
-  border: none;
-  background-color: #9b9b9b;
-  border: 1px solid #333333;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  padding: 0.3rem 0.6rem;
-  cursor: pointer;
-  position: relative;
-  bottom: 6rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 10px;
-  color: #333333;
-  font-weight: bold;
-  text-decoration: none;
 }
 
 .search-icon {

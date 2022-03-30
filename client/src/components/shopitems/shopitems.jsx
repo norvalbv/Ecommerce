@@ -37,9 +37,6 @@ export default function ShopItems() {
             <Link to="/products" className="search-icon">
               <SearchIcon fontSize="large" className="icon" />
             </Link>
-            <Link to="/categories" className="similar-btn">
-              View Similar
-            </Link>
             <ShoppingBasketIcon
               fontSize="large"
               className="icon"
@@ -56,9 +53,6 @@ export default function ShopItems() {
           <div className="overlay">
             <Link to="/products" className="search-icon">
               <SearchIcon fontSize="large" className="icon" />
-            </Link>
-            <Link to="/categories" className="similar-btn">
-              View Similar
             </Link>
             <ShoppingBasketIcon
               fontSize="large"
@@ -77,9 +71,6 @@ export default function ShopItems() {
             <Link to="/products" className="search-icon">
               <SearchIcon fontSize="large" className="icon" />
             </Link>
-            <Link to="/categories" className="similar-btn">
-              View Similar
-            </Link>
             <ShoppingBasketIcon
               fontSize="large"
               className="icon"
@@ -96,9 +87,6 @@ export default function ShopItems() {
           <div className="overlay">
             <Link to="/products" className="search-icon">
               <SearchIcon fontSize="large" className="icon" />
-            </Link>
-            <Link to="/categories" className="similar-btn">
-              View Similar
             </Link>
             <ShoppingBasketIcon
               fontSize="large"

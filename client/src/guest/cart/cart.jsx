@@ -6,17 +6,12 @@ import { Link } from "react-router-dom";
 import imgg from "../../files/705tee.jpg";
 import { useDispatch } from "react-redux";
 import { Loading } from "../../components/loading";
+import { removeProduct } from "../../features/cartSlice";
 
 export const Cart = () => {
   const cart = useSelector((state) => state.cart);
-
-  // console.log(cart.products[0].item1.desc);
-
+  console.log(cart);
   const dispatch = useDispatch();
-
-  const handleClick = () => {
-    dispatch({ type: "removeProduct", payload: "" });
-  };
 
   if (!cart) {
     return <Loading />;
@@ -29,21 +24,24 @@ export const Cart = () => {
       {cart.quantity >= 1 ? (
         <>
           <h2>Your Cart</h2>
-          {cart.products.map((product, { name }) => (
-            <div
-              className="cart-product-container"
-              key={cart.products.indexOf(product)}
-            >
-              <img
+          {cart.products.map(({ product, size, price }) => (
+            <div className="cart-product-container" key={Math.random()}>
+              {/* <img
                 className="cart-product-image"
                 src={imgg}
                 alt="#"
                 style={{ width: "3rem" }}
-              />
-              <h3 className="cart=product-title">{name}</h3>
+              /> */}
+              <h3 className="cart=product-title">{product}</h3>
               <div className="product-more-data">
-                <p>Size: S</p>
-                <button onClick={handleClick} className="remove-product">
+                <p>Size: {size}</p>
+                <p>Price: {price}</p>
+                <button
+                  onClick={() =>
+                    dispatch(removeProduct({ product, size, price }))
+                  }
+                  className="remove-product"
+                >
                   remove from basket
                 </button>
               </div>

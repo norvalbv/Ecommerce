@@ -60,16 +60,16 @@ html, body {
 }
 
 /* Misc */
-.categories-inner-container {
+.product-page {
   color: #333333;
 }
 
-.categories-inner-container h2 {
+.product-page .page-title {
   margin: 1rem;
   font-size: 1.75rem;
 }
 
-.categories-inner-container .filters {
+.product-page .filters-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,22 +82,22 @@ html, body {
   margin: 1rem;
 }
 
-.categories-inner-container .filter-left, .categories-inner-container .filter-right {
+.product-page .inner-filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
 }
 
-.categories-inner-container .filter-left select, .categories-inner-container .filter-right select {
+.product-page .inner-filter select {
   width: 3rem;
 }
 
-.categories-inner-container .filter-left #color, .categories-inner-container .filter-right #color {
+.product-page .inner-filter #color {
   width: 4rem;
 }
 
-.categories-inner-container .filter-left #sort, .categories-inner-container .filter-right #sort {
+.product-page .inner-filter #sort {
   width: 6rem;
 }
 /*# sourceMappingURL=productpage.css.map */

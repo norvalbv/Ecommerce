@@ -3,10 +3,13 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import NavBar from "../../components/navbar/navbar";
+import Footer from "../../components/footer/footer";
 
-export default function ItemAccordion() {
+export default function FAQ() {
   return (
     <>
+      <NavBar />
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -30,6 +33,40 @@ export default function ItemAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
+          <Typography>Returns policy</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
+            necessitatibus quaerat ex nihil qui nobis reiciendis deserunt,
+            quidem earum quam inventore facere dicta neque autem nesciunt harum
+            iure? Doloribus, debitis.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <Typography>Delivery information</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
+            necessitatibus quaerat ex nihil qui nobis reiciendis deserunt,
+            quidem earum quam inventore facere dicta neque autem nesciunt harum
+            iure? Doloribus, debitis.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
           <Typography>Reviews</Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -41,6 +78,7 @@ export default function ItemAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
+      <Footer />
     </>
   );
 }

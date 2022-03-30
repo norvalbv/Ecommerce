@@ -7,16 +7,13 @@ import { useEffect, useState } from "react";
 import imgg from "../../files/705tee.jpg";
 import Footer from "../footer/footer";
 import { Loading } from "../loading";
+import { addProduct } from "../../features/cartSlice";
 
 export default function Products({ info }) {
-  const [product, setProduct] = useState({});
-  const [quantity, setQuantity] = useState(1);
-  const [totalPrice, setTotalPrice] = useState(0);
-
   const dispatch = useDispatch();
 
-  const handleClick = () => {
-    dispatch({ type: "addProduct" });
+  const handleClick = (price, product, size) => {
+    dispatch(addProduct({ price: price, product: product, size: size }));
   };
 
   if (!info) {
@@ -27,7 +24,7 @@ export default function Products({ info }) {
     <div className="products">
       <NavBar />
       <BreadcrumbsComponent />
-      {info.map(({id, name, imageURL }) => (
+      {info.map(({ id, name, imageURL, price }) => (
         <div className="product-container" key={id}>
           <img
             src={imageURL}
@@ -51,7 +48,10 @@ export default function Products({ info }) {
                 <option value="size">L</option>
                 <option value="size">XL</option>
               </select>
-              <button onClick={handleClick} className="cart-buttons">
+              <button
+                onClick={() => handleClick(price.current.value, name, 'small')}
+                className="cart-buttons"
+              >
                 add to cart
               </button>
             </div>

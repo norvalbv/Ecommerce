@@ -1,5 +1,5 @@
-import React from "react";
 import "./footer.scss";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -17,18 +17,32 @@ export default function Footer() {
           <div className="help">
             <h3>Help</h3>
             <ul>
-              <li>Delivery Information</li>
-              <li>FAQ</li>
-              <li>Returns Policy</li>
-              <li>About Us</li>
+              <Link to="/delivery-information">
+                <li className="footer-link">Delivery Information</li>
+              </Link>
+              <Link to="/faqs">
+                <li className="footer-link">FAQ</li>
+              </Link>
+              <Link to="/returns-policy">
+                <li className="footer-link">Returns Policy</li>
+              </Link>
+              <Link to="/">
+                <li className="footer-link">About Us</li>
+              </Link>
             </ul>
           </div>
           <div className="pages">
             <h3>Pages</h3>
             <ul>
-              <li>Shop collections</li>
-              <li>My Account</li>
-              <li>Wishlist</li>
+              <Link to="/categories">
+                <li className="footer-link">Shop collections</li>
+              </Link>
+              <Link to="/">
+                <li className="footer-link">My Account</li>
+              </Link>
+              <Link to="/">
+                <li className="footer-link">Wishlist</li>
+              </Link>
             </ul>
           </div>
         </div>

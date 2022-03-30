@@ -6,12 +6,12 @@ import "./productpage.scss";
 
 export default function ProductPage() {
   return (
-    <div className="productpage">
+    <div className="product-page">
       <NavBar />
       <BreadcrumbsComponent />
-      <h2>Categories</h2>
-      <div className="filters">
-        <div className="filter-left">
+      <h2 className="page-title">Categories</h2>
+      <div className="filters-container">
+        <div className="inner-filter">
           <p>Filter Products</p>
           <select name="color" id="color">
             <option value="color">Black</option>
@@ -27,7 +27,7 @@ export default function ProductPage() {
             <option value="size">XL</option>
           </select>
         </div>
-        <div className="filter-right">
+        <div className="inner-filter">
           <p>Sort Products:</p>
           <select name="sort" id="sort">
             <option value="sort">Featured</option>

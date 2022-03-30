@@ -4,8 +4,8 @@ const pool = require("../db/pool");
 
 const getAllData = async (req, res) => {
   try {
-    // pool.query(`SELECT * FROM ecommerce`);
-    res.send("TEST");
+    const allData = pool.query(`SELECT * FROM products`);
+    res.send(allData);
   } catch (error) {
     console.error(error);
   }

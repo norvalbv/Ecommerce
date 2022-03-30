@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter as Routers, Routes, Route } from "react-router-dom";
-import HomePage from "../guest/homepage";
+import HomePage from "../guest/homepage/homepage";
 import Login from "../guest/login/login";
 import ProductPage from "../guest/productpage/productpage";
 import Register from "../guest/register/register";
@@ -8,6 +8,8 @@ import Categories from "../guest/categories/categories";
 import Products from "../components/products/products";
 import { Cart } from "../guest/cart/cart";
 import { MyAccount } from "../guest/myaccount/myaccount";
+import FAQ from "../guest/faq/faq";
+import { Returnspolicy } from "../guest/returnspolicy";
 
 function App() {
   const [info, setInfo] = useState(null);
@@ -47,8 +49,10 @@ function App() {
         <Route path="/products" element={<Products info={info} />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/cart" element={<Cart />}></Route>
-        <Route path="/myaccount" element={<MyAccount />}></Route>
+        <Route path="/cart" element={<Cart info={info} />}></Route>
+        <Route path="/my-account" element={<MyAccount />}></Route>
+        <Route path="faqs" element={<FAQ />}></Route>
+        <Route path="/returns-policy" element={<Returnspolicy />}></Route>
       </Routes>
     </Routers>
   );

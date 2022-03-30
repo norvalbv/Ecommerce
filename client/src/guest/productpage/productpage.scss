@@ -1,20 +1,20 @@
 @import '../../universal.scss';
 
-.categories-inner-container {
+.product-page {
     color: $primary-dark;
 
-    h2 {
+    .page-title {
         margin: 1rem;
         font-size: 1.75rem;
     }
 
-    .filters {
+    .filters-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 1rem;
     }
-    .filter-left, .filter-right {
+    .inner-filter {
         display: flex;
         gap: 0.5rem;
         
