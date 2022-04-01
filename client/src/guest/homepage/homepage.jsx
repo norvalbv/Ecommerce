@@ -16,14 +16,14 @@ export default function HomePage() {
       <ShopItems />
       <div className="hp-categories">
         <div className="left">
-          <h2>View products</h2>
-          <Link className="view-more" to="/productpage">
+          <h2>View T-Shirts</h2>
+          <Link className="view-more" to="/products/tshirts">
             View More
           </Link>
         </div>
         <div className="right">
-          <h2>View products</h2>
-          <Link className="view-more" to="/productpage">
+          <h2>View Hoodies</h2>
+          <Link className="view-more" to="/products/hoodies">
             View More
           </Link>
         </div>

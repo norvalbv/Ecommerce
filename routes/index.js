@@ -11,4 +11,15 @@ const getAllData = async (req, res) => {
   }
 };
 
-module.exports = { getAllData };
+const getCategoryData = async (req, res) => {
+  try {
+    const info = await pool.query(
+      `SELECT * FROM products WHERE category = '${req.params.category}'`
+    );
+    res.send(info.rows);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+module.exports = { getAllData, getCategoryData };

@@ -13,22 +13,32 @@ export default function ProductPage() {
     <div className="product-page">
       <NavBar />
       <BreadcrumbsComponent />
-      <h2 className="page-title">Categories</h2>
+      <h2 className="page-title">Products</h2>
       <div className="filters-container">
         <div className="inner-filter">
           <p>Filter Products</p>
           <select
             name="color"
-            id="color"
+            className="select-filter"
             onChange={(e) => setColor(e.target.value)}
           >
+            <option hidden disabled defaultValue="Color" value>
+              Color
+            </option>
             <option value="black">Black</option>
             <option value="white">White</option>
             <option value="red">Red</option>
             <option value="blue">Blue</option>
             <option value="orange">Orange</option>
           </select>
-          <select name="size" id="" onChange={(e) => setSize(e.target.value)}>
+          <select
+            name="size"
+            className="select-filter"
+            onChange={(e) => setSize(e.target.value)}
+          >
+            <option hidden disabled defaultValue="Size" value>
+              Size
+            </option>
             <option value="small">S</option>
             <option value="medium">M</option>
             <option value="large">L</option>

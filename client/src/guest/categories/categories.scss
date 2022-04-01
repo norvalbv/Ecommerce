@@ -7,6 +7,26 @@
     margin: 1rem;
     font-size: 1.75rem;
   }
+  .all-items {
+    background-image: url("../../files/landscape-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 1;
+    border: 2px solid $primary-light;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 50vh;
+
+    .view-more {
+      padding: 0.25rem 0.5rem;
+      border: 1px solid $primary-dark;
+      color: $primary-neutral;
+      text-decoration: none;
+    }
+  }
 
   .categories-inner-container {
     margin: $component-margin;
@@ -23,7 +43,8 @@
     }
 
     .left,
-    .right {
+    .right,
+    .all-items {
       background-repeat: no-repeat;
       background-size: cover;
       flex: 1;

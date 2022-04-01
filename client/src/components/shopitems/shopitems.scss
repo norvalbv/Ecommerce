@@ -3,13 +3,13 @@
 
 .shopitems {
   display: inline-grid;
-  grid-template: 1fr / repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 5%;
   row-gap: 2rem;
   width: 100%;
 
-
   .item-container {
+    background: #000;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,33 +1,29 @@
-@import '../../universal.scss';
+@import "../../universal.scss";
 
 .product-page {
-    color: $primary-dark;
+  color: $primary-dark;
 
-    .page-title {
-        margin: 1rem;
-        font-size: 1.75rem;
+  .page-title {
+    margin: 1rem;
+    font-size: 1.75rem;
+  }
+
+  .filters-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+  }
+  .inner-filter {
+    display: flex;
+    gap: 0.5rem;
+
+    .select-filter {
+      width: 4rem;
     }
 
-    .filters-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 1rem;
+    #sort {
+      width: 6rem;
     }
-    .inner-filter {
-        display: flex;
-        gap: 0.5rem;
-        
-        select {
-            width: 3rem;
-        }
-
-        #color {
-            width: 4rem;
-        }
-
-        #sort {
-            width: 6rem;
-        }
-    }
+  }
 }

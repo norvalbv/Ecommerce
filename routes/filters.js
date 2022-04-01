@@ -2,10 +2,10 @@ const pool = require("../db/pool");
 
 const filterSize = async (req, res) => {
   try {
-    const data = await pool.query(
-      `SELECT * FROM products ORDER BY ${req.params.size}`
+    const info = await pool.query(
+      `SELECT * FROM products ORDER BY size = '${req.params.size}' DESC`
     );
-    res.send(data.rows);
+    res.send(info.rows);
   } catch (error) {
     console.error(error);
   }
@@ -13,10 +13,10 @@ const filterSize = async (req, res) => {
 
 const filterColor = async (req, res) => {
   try {
-    const data = await pool.query(
-      `SELECT * FROM products ORDER BY ${req.params.size}`
+    const info = await pool.query(
+      `SELECT * FROM products ORDER BY color = '${req.params.color}' DESC`
     );
-    res.send(data.rows);
+    res.send(info.rows);
   } catch (error) {
     console.error(error);
   }

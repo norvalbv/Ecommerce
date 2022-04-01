@@ -16,27 +16,7 @@ app.use(cors());
 // get data
 app.get("/getdata", index.getAllData);
 
-app.get("/getdata/:color", async (req, res) => {
-  try {
-    const info = await pool.query(
-      `SELECT * FROM products ORDER BY color = '${req.params.color}' DESC`
-    );
-    res.send(info.rows);
-  } catch (error) {
-    console.error(error);
-  }
-});
-
-app.get("/getdata/:size", async (req, res) => {
-  try {
-    const info = await pool.query(
-      `SELECT * FROM products ORDER BY color = '${req.params.size}' DESC`
-    );
-    res.send(info.rows);
-  } catch (error) {
-    console.error(error);
-  }
-});
+app.get("/getdata/:category", index.getCategoryData);
 
 // filters
 app.get("/location/:size", filters.filterSize);
