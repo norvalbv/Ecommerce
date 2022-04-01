@@ -1,22 +1,51 @@
-import React, { useState } from "react";
-import img from "../../files/705tee.jpg";
-import img2 from "../../files/705tee2.jpg";
-import img3 from "../../files/705sweater.jpg";
-import img4 from "../../files/705sweater2.jpg";
+import { useState, useEffect } from "react";
 import "./shopitems.scss";
-
 import { Link } from "react-router-dom";
-
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 
 import { useDispatch } from "react-redux";
 
-export default function ShopItems() {
-  const [image, setImage] = useState(img);
-  const [image2, setImage2] = useState(img3);
-  const [image3, setImage3] = useState(img);
-  const [image4, setImage4] = useState(img3);
+export default function ShopItems({ color, size }) {
+  const [hover, setHover] = useState([]);
+  const [products, setProducts] = useState([]);
+
+  const getProductData = async (req, res) => {
+    try {
+      const data = await fetch(`http://localhost:5000/getdata/${size}`);
+      console.log(data);
+      const response = await data.json();
+      setProducts(response);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  useEffect(() => {
+    getProductData();
+    console.log(size);
+  }, [size]);
+
+  // useEffect(() => {
+  //   if (!color) {
+  //     return;
+  //   } else {
+  //     (async (req, res) => {
+  //       console.log(color);
+  //       try {
+  //         const data = await fetch(`http://localhost:5000/getdata/black`);
+  //         const response = await data.json();
+  //         setProducts(response);
+  //       } catch (error) {
+  //         console.error(error);
+  //       }
+  //     })();
+  //   }
+  // }, [color]);
+  const handleMouseEvent = (i) => {
+    let newhover = [...hover];
+    newhover[i] = hover[i] ? false : true;
+    setHover(newhover);
+  };
 
   const dispatch = useDispatch();
 
@@ -25,77 +54,37 @@ export default function ShopItems() {
   };
 
   return (
-    <div className="container">
+    <>
       <div className="shopitems">
-        <div
-          className="itemContainer"
-          onMouseOver={() => setImage(img2)}
-          onMouseOut={() => setImage(img)}
-        >
-          <img src={image} alt="#" className="item-image" />
-          <div className="overlay">
-            <Link to="/products" className="search-icon">
-              <SearchIcon fontSize="large" className="icon" />
-            </Link>
-            <ShoppingBasketIcon
-              fontSize="large"
-              className="icon"
-              onClick={handleClick}
-            />
-          </div>
-        </div>
-        <div
-          className="itemContainer"
-          onMouseOver={() => setImage2(img4)}
-          onMouseOut={() => setImage2(img3)}
-        >
-          <img src={image2} alt="#" className="item-image" />
-          <div className="overlay">
-            <Link to="/products" className="search-icon">
-              <SearchIcon fontSize="large" className="icon" />
-            </Link>
-            <ShoppingBasketIcon
-              fontSize="large"
-              className="icon"
-              onClick={handleClick}
-            />
-          </div>
-        </div>
-        <div
-          className="itemContainer"
-          onMouseOver={() => setImage3(img2)}
-          onMouseOut={() => setImage3(img)}
-        >
-          <img src={image3} alt="#" className="item-image" />
-          <div className="overlay">
-            <Link to="/products" className="search-icon">
-              <SearchIcon fontSize="large" className="icon" />
-            </Link>
-            <ShoppingBasketIcon
-              fontSize="large"
-              className="icon"
-              onClick={handleClick}
-            />
-          </div>
-        </div>
-        <div
-          className="itemContainer"
-          onMouseOver={() => setImage4(img4)}
-          onMouseOut={() => setImage4(img3)}
-        >
-          <img src={image4} alt="#" className="item-image" />
-          <div className="overlay">
-            <Link to="/products" className="search-icon">
-              <SearchIcon fontSize="large" className="icon" />
-            </Link>
-            <ShoppingBasketIcon
-              fontSize="large"
-              className="icon"
-              onClick={handleClick}
-            />
-          </div>
-        </div>
+        {products.map(
+          ({ id, price, product, image_alt, image, image_2 }, i) => (
+            <div
+              key={id}
+              onMouseOver={() => handleMouseEvent(i)}
+              onMouseOut={() => handleMouseEvent(i)}
+              className="item-container"
+            >
+              <img
+                src={hover[i] ? image_2 : image}
+                alt={image_alt}
+                className="item-image"
+              ></img>
+              <div className="overlay">
+                <Link to="/products" className="search-icon">
+                  <SearchIcon fontSize="large" className="icon" />
+                </Link>
+                <ShoppingBasketIcon
+                  fontSize="large"
+                  className="icon"
+                  onClick={handleClick}
+                />
+              </div>
+              <p className="product-description">{product}</p>
+              <p>£{price}</p>
+            </div>
+          )
+        )}
       </div>
-    </div>
+    </>
   );
 }

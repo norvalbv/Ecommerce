@@ -3,8 +3,12 @@ import NavBar from "../../components/navbar/navbar";
 import ShopItems from "../../components/shopitems/shopitems";
 import Footer from "../../components/footer/footer";
 import "./productpage.scss";
+import { useState } from "react";
 
 export default function ProductPage() {
+  const [color, setColor] = useState(null);
+  const [size, setSize] = useState(null);
+
   return (
     <div className="product-page">
       <NavBar />
@@ -13,18 +17,22 @@ export default function ProductPage() {
       <div className="filters-container">
         <div className="inner-filter">
           <p>Filter Products</p>
-          <select name="color" id="color">
-            <option value="color">Black</option>
-            <option value="color">Green</option>
-            <option value="color">Red</option>
-            <option value="color">Blue</option>
-            <option value="color">Orange</option>
+          <select
+            name="color"
+            id="color"
+            onChange={(e) => setColor(e.target.value)}
+          >
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="orange">Orange</option>
           </select>
-          <select name="size" id="">
-            <option value="size">S</option>
-            <option value="size">M</option>
-            <option value="size">L</option>
-            <option value="size">XL</option>
+          <select name="size" id="" onChange={(e) => setSize(e.target.value)}>
+            <option value="small">S</option>
+            <option value="medium">M</option>
+            <option value="large">L</option>
+            <option value="extralarge">XL</option>
           </select>
         </div>
         <div className="inner-filter">
@@ -36,7 +44,7 @@ export default function ProductPage() {
           </select>
         </div>
       </div>
-      <ShopItems />
+      <ShopItems color={color} size={size} />
       <Footer />
     </div>
   );

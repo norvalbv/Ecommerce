@@ -1,8 +1,4 @@
-This is currently a front end only project is built with React.
- 
-I hard-coded half the design myself with some components encorporated from the MUI library.
-
-I am currently learning back end and improving my testing skills and learning state management. This project is therefore, is still a work in progress and these new skills will be implemented accordingly. See below for a upcoming roadmap.
+A full stack e-commerce web app using the PERN stack.
 
 To get started use: yarn start
 or visit: https://benjamin-ecommerce-demo.netlify.app/
@@ -18,14 +14,3 @@ Desktop:
 Mobile:
 
 ![E-commerce site landing page for mobile](./src/files/landingpage-mobile.png "E-commerce site")
-
-
-Front end design (completed | 27/12/2021)
-
-Functionality of site, i.e., adding item to basket. (goal | 02/01/2022)
-
-Implement the Etsy API to allow for real products and descriptions. (goal | 10/01/2022)
-
-Implement tests with Enzyme and Jest (goal | 15/01/2022)
-
-more to be added...

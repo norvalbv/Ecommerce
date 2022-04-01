@@ -12,29 +12,43 @@ import FAQ from "../guest/faq/faq";
 import { Returnspolicy } from "../guest/returnspolicy";
 
 function App() {
-  const [info, setInfo] = useState(null);
+  const [info, setInfo] = useState([]);
 
+  // useEffect(() => {
+  //   (async () => {
+  //     try {
+  //       const data = await fetch(
+  //         "https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&country=US&sort=freshness&currency=USD&sizeSchema=US&lang=en-US",
+  //         {
+  //           method: "GET",
+  //           headers: {
+  //             "x-rapidapi-host": "asos2.p.rapidapi.com",
+  //             "x-rapidapi-key":
+  //               "dffcc5f24emsh89532c7a5575c02p168eddjsn47c9716293e9",
+  //           },
+  //         }
+  //       );
+  //       const response = await data.json();
+  //       console.log(response);
+  //       setInfo(response.products);
+  //     } catch (err) {
+  //       console.error(err);
+  //     }
+  //   })();
+  // }, []);
+
+  const fetchData = async (req, res) => {
+    try {
+      const data = await fetch("http://localhost:5000/getdata");
+      const response = await data.json();
+      setInfo(response);
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  };
   useEffect(() => {
-    (async () => {
-      try {
-        const data = await fetch(
-          "https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&country=US&sort=freshness&currency=USD&sizeSchema=US&lang=en-US",
-          {
-            method: "GET",
-            headers: {
-              "x-rapidapi-host": "asos2.p.rapidapi.com",
-              "x-rapidapi-key":
-                "dffcc5f24emsh89532c7a5575c02p168eddjsn47c9716293e9",
-            },
-          }
-        );
-        const response = await data.json();
-        console.log(response);
-        setInfo(response.products);
-      } catch (err) {
-        console.error(err);
-      }
-    })();
+    fetchData();
   }, []);
 
   return (
