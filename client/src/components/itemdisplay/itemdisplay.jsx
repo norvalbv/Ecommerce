@@ -52,14 +52,10 @@ export default function ItemDisplay({ filters, sort }) {
   };
 
   useEffect(() => {
-    // const i = products.filter((item) =>
-    //   Object.entries(i.every(([key, value]) => item[key].includes(value)))
-    // );
-    // console.log(i);
-
-    const i = products.filter((item) => item.color === filters.color);
+    const i = products.filter((item) =>
+      Object.entries(filters).every(([key, value]) => item[key].includes(value))
+    );
     setFilteredProducts(i);
-    console.log(i);
   }, [filters]);
 
   useEffect(() => {

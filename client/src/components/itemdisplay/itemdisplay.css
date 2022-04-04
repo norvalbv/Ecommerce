@@ -61,11 +61,10 @@ html, body {
 
 /* Misc */
 .shopitems {
-  display: -ms-inline-grid;
-  display: inline-grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  gap: 5%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit] !important;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
   row-gap: 2rem;
   width: 100%;
 }

@@ -60,10 +60,6 @@ html, body {
 }
 
 /* Misc */
-.cart {
-  height: 100vh;
-}
-
 .cart-product-container {
   border-bottom: 1px solid gray;
   width: 50%;
@@ -100,6 +96,7 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   gap: 3rem;
+  position: relative;
 }
 
 .cart-product-container .product-more-data .remove-product {
@@ -185,5 +182,22 @@ html, body {
   border-radius: 5px;
   border: 1px solid #121212;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  .cart-product-container {
+    height: 7.5rem;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  .cart-product-container {
+    height: 12rem;
+        grid-template-areas: "img title title" "buttons buttons buttons";
+  }
+  .remove-product {
+    position: absolute;
+    bottom: 0;
+  }
 }
 /*# sourceMappingURL=cart.css.map */

@@ -20,7 +20,6 @@
 }
 
 .product-image {
-  height: 37.5rem;
   width: 80%;
   margin-bottom: 1rem;
 }
@@ -71,6 +70,10 @@
 
   .product {
     padding: 5rem 0 0;
+  }
+
+  .product-image {
+    width: 100%;
   }
 }
 

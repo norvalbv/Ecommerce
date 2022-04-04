@@ -19,7 +19,6 @@ export const Cart = () => {
   return (
     <div className="cart">
       <NavBar />
-
       {cart.quantity >= 1 ? (
         <>
           <h2>Your Cart</h2>

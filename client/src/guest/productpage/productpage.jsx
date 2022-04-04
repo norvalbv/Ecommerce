@@ -35,7 +35,7 @@ export default function ProductPage() {
             <option value="black">Black</option>
             <option value="white">White</option>
           </select>
-          <select name="size" className="select-filter" onChange={handleChange}>
+          <select name="size" className="select-filter">
             <option hidden defaultValue="size">
               Size
             </option>

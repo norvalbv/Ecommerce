@@ -48,6 +48,8 @@ export default function Product() {
 
   const [size, setSize] = useState("small");
 
+  const windowSize = window.screen.width < 575;
+
   if (!product) {
     return <Loading />;
   }
@@ -62,27 +64,29 @@ export default function Product() {
           i
         ) => (
           <div className="product-container" key={i}>
-            <div className="product-images">
-              <img
-                src={image}
-                alt={[image_alt, "display image"].join(" ")}
-                className="product-image"
-              />
-              {image_2 && (
+            {windowSize ? (
+              <img src={image} alt={image_alt} />
+            ) : (
+              <div className="product-images">
+                <img
+                  src={image}
+                  alt={[image_alt, "display image"].join(" ")}
+                  className="product-image"
+                />
                 <img
                   src={image_2}
                   alt={[image_alt, "display image"].join(" ")}
                   className="product-image"
                 />
-              )}
-              {image_3 && (
-                <img
-                  src={image_3}
-                  alt={[image_alt, "display image"].join(" ")}
-                  className="product-image"
-                />
-              )}
-            </div>
+                {image_3 && (
+                  <img
+                    src={image_3}
+                    alt={[image_alt, "display image"].join(" ")}
+                    className="product-image"
+                  />
+                )}
+              </div>
+            )}
             <div className="product">
               <h2 className="product-title">{product}</h2>
               <p id="price">Price: £{price}</p>

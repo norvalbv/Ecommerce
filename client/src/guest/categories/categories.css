@@ -70,7 +70,7 @@ html, body {
 }
 
 .categories .all-items {
-  width: 750px;
+  width: 75%;
   height: 1500px;
   margin: 0 auto;
   background-image: url("https://i.ibb.co/rv4Vq1m/11-33-19-Cyrus-Clothing-location-social-media.jpg");
@@ -123,12 +123,13 @@ html, body {
 .categories .categories-inner-container .left {
   background-image: url("https://i.ibb.co/S6g6W3x/11-06-56-Cyrus-Clothing-location-social-media.jpg");
   background-position: 0 -5rem;
+  background-size: cover;
 }
 
 .categories .categories-inner-container .right {
   background-image: url("https://i.ibb.co/xYWn5m1/IMG-2730.jpg");
   background-position: 0 -16rem;
-  background-size: 700px auto !important;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -136,7 +137,6 @@ html, body {
 .categories .categories-inner-container .right,
 .categories .categories-inner-container .all-items {
   background-repeat: no-repeat;
-  background-size: cover;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
