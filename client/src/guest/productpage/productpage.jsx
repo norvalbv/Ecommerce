@@ -7,6 +7,7 @@ import { useState } from "react";
 
 export default function ProductPage() {
   const [filters, setFilters] = useState({});
+  const [sort, setSort] = useState("Featured");
 
   const handleChange = (e) => {
     setFilters({
@@ -15,7 +16,6 @@ export default function ProductPage() {
     });
   };
 
-  console.log(filters);
   return (
     <div className="product-page">
       <NavBar />
@@ -47,14 +47,20 @@ export default function ProductPage() {
         </div>
         <div className="inner-filter">
           <p>Sort Products:</p>
-          <select name="sort" id="sort">
-            <option value="sort">Featured</option>
-            <option value="sort">New In</option>
-            <option value="sort">Best Selling</option>
+          <select
+            name="sort"
+            id="sort"
+            onChange={(e) => {
+              setSort(e.target.value);
+            }}
+          >
+            <option value="Featured">Featured</option>
+            <option value="New In">New In</option>
+            <option value="Best Selling">Best Selling</option>
           </select>
         </div>
       </div>
-      <ItemDisplay filters={filters} />
+      <ItemDisplay filters={filters} sort={sort} />
       <Footer />
     </div>
   );

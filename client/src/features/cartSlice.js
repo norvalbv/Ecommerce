@@ -9,6 +9,7 @@ const cartSlice = createSlice({
   },
   reducers: {
     addProduct(state, action) {
+      console.log(action.payload)
       state.totalPrice = state.totalPrice + action.payload.price;
       state.quantity++;
       state.products.push({
@@ -23,12 +24,12 @@ const cartSlice = createSlice({
     removeProduct(state, action) {
       state.totalPrice = state.totalPrice - action.payload.price;
       state.quantity--;
-      // const i = state.products.filter(
-      //   (item) => item.product !== action.payload.product
-      // );
-      const i = state.products.pop();
-      console.log(state.products);
-      console.log(i);
+      state.products.splice(
+        state.products.indexOf(
+          state.products.find((item) => item.product === action.payload.product)
+        ),
+        1
+      );
       return;
     },
   },
