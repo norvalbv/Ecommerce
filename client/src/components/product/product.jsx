@@ -8,6 +8,7 @@ import { Loading } from "../loading";
 import { addProduct } from "../../features/cartSlice";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import parse from "html-react-parser";
 
 export default function Product() {
   const location = useLocation();
@@ -17,12 +18,10 @@ export default function Product() {
 
   const getProduct = async (req, res) => {
     try {
-      console.log(locationHandle);
       const response = await fetch(
         `http://localhost:5000/product/${locationHandle}`
       );
       const data = await response.json();
-      console.log(data);
       setProduct(data);
     } catch (error) {
       console.error(error);
@@ -35,9 +34,19 @@ export default function Product() {
 
   // handles cart dispatch
   const dispatch = useDispatch();
-  const handleClick = (price, product, size) => {
-    dispatch(addProduct({ price: price, product: product, size: size }));
+  const handleClick = (price, product, size, image, image_alt) => {
+    dispatch(
+      addProduct({
+        price,
+        product,
+        size,
+        image,
+        image_alt,
+      })
+    );
   };
+
+  const [size, setSize] = useState("small");
 
   if (!product) {
     return <Loading />;
@@ -47,56 +56,66 @@ export default function Product() {
     <div className="products">
       <NavBar />
       <BreadcrumbsComponent />
-      {product.map(({ image, image_alt, image_2, image_3, price, product }, i) => (
-        <div className="product-container" key={i}>
-          <img
-            src={image}
-            alt={[image_alt, "display image"].join(" ")}
-            className="product-image"
-          />
-          <img
-            src={image_2}
-            alt={[image_alt, "display image"].join(" ")}
-            className="product-image"
-          />
-          {image_3 && (
-            <img
-              src={image_3}
-              alt={[image_alt, "display image"].join(" ")}
-              className="product-image"
-            />
-          )}
-
-          <div className="product">
-            <h2 className="product-title">{product}</h2>
-            <p id="price">£{price}</p>
-            <div className="product-info-section">
-              <h3 className="product-desc-title">Product Description</h3>
-              <p className="product-desc">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Mollitia accusamus doloribus dolore accusantium, consequatur
-                amet nam architecto? Omnis, reiciendis nostrum.
-              </p>
-              <p style={{ fontSize: "0.75rem" }}>Size:</p>
-              <select name="size" className="cart-buttons">
-                <option value="small">small</option>
-                <option value="medium">medium</option>
-                <option value="large">large</option>
-                <option value="extralarge">extralarge</option>
-              </select>
-              <button
-                onClick={() =>
-                  handleClick(price, product, "small")
-                }
-                className="cart-buttons"
-              >
-                add to cart
-              </button>
+      {product.map(
+        (
+          { image, image_alt, image_2, image_3, price, product, description },
+          i
+        ) => (
+          <div className="product-container" key={i}>
+            <div className="product-images">
+              <img
+                src={image}
+                alt={[image_alt, "display image"].join(" ")}
+                className="product-image"
+              />
+              {image_2 && (
+                <img
+                  src={image_2}
+                  alt={[image_alt, "display image"].join(" ")}
+                  className="product-image"
+                />
+              )}
+              {image_3 && (
+                <img
+                  src={image_3}
+                  alt={[image_alt, "display image"].join(" ")}
+                  className="product-image"
+                />
+              )}
+            </div>
+            <div className="product">
+              <h2 className="product-title">{product}</h2>
+              <p id="price">Price: £{price}</p>
+              <div className="product-info-section">
+                <p style={{ fontSize: "0.75rem" }}>Size:</p>
+                <select
+                  name="size"
+                  className="cart-buttons"
+                  onChange={(e) => setSize(e.target.value)}
+                >
+                  <option value="small">small</option>
+                  <option value="medium">medium</option>
+                  <option value="large">large</option>
+                  <option value="extralarge">extralarge</option>
+                </select>
+                <button
+                  onClick={() =>
+                    handleClick(price, product, size, image, image_alt)
+                  }
+                  className="cart-buttons"
+                >
+                  add to cart
+                </button>
+              </div>
+              <div className="product-desc">{parse(description)}</div>
             </div>
           </div>
-        </div>
-      ))}
-      <div style={{ width: "75%", margin: "0 auto 3rem" }}>
+        )
+      )}
+      <div
+        style={{ width: "75%", margin: "0 auto 3rem" }}
+        className="accordion"
+      >
         <ItemAccordion />
       </div>
       <Footer />

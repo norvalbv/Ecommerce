@@ -34,7 +34,7 @@ function App() {
         {/* product related */}
         <Route path="/categories" element={<Categories />}></Route>
         <Route
-          path="/products/:category"
+          path="/categories/:category/products"
           element={<ProductPage info={info} />}
         ></Route>
         <Route path="/product/:category/:handle" element={<Product />}></Route>

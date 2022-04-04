@@ -3,7 +3,6 @@ import Footer from "../../components/footer/footer";
 import NavBar from "../../components/navbar/navbar";
 import "./cart.scss";
 import { Link } from "react-router-dom";
-import imgg from "../../files/705tee.jpg";
 import { useDispatch } from "react-redux";
 import { Loading } from "../../components/loading";
 import { removeProduct } from "../../features/cartSlice";
@@ -24,30 +23,40 @@ export const Cart = () => {
       {cart.quantity >= 1 ? (
         <>
           <h2>Your Cart</h2>
-          {cart.products.map(({ product, size, price }) => (
-            <div className="cart-product-container" key={Math.random()}>
-              {/* <img
-                className="cart-product-image"
-                src={imgg}
-                alt="#"
-                style={{ width: "3rem" }}
-              /> */}
-              <h3 className="cart=product-title">{product}</h3>
-              <div className="product-more-data">
-                <p>Size: {size}</p>
-                <p>Price: {price}</p>
-                <button
-                  onClick={() =>
-                    dispatch(removeProduct({ product, size, price }))
-                  }
-                  className="remove-product"
-                >
-                  remove from basket
-                </button>
+          {cart.products.map(
+            ({ product, size, price, image, image_alt }, i) => (
+              <div className="cart-product-container" key={i}>
+                <img
+                  className="cart-product-image"
+                  src={image}
+                  alt={image_alt}
+                  style={{ width: "3rem" }}
+                />
+                <h3 className="cart=product-title">{product}</h3>
+                <div className="product-more-data">
+                  <p>Size: {size}</p>
+                  <p>Price: {price}</p>
+                  <button
+                    onClick={() =>
+                      dispatch(
+                        removeProduct({
+                          product,
+                          size,
+                          price,
+                          image,
+                          image_alt,
+                        })
+                      )
+                    }
+                    className="remove-product"
+                  >
+                    remove from basket
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
-          {/* <CartInfo /> */}
+            )
+          )}
+          <h3>Your Total: £{cart.totalPrice}</h3>
         </>
       ) : (
         <div className="empty-cart">

@@ -5,7 +5,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import { useDispatch } from "react-redux";
 
-export default function ItemDisplay({ color, size }) {
+export default function ItemDisplay({ filters }) {
   const [hover, setHover] = useState([]);
   const [products, setProducts] = useState([]);
 
@@ -14,45 +14,40 @@ export default function ItemDisplay({ color, size }) {
 
   const getProductData = async (req, res) => {
     try {
-      if (category !== undefined && category !== "all") {
-        const data = await fetch(`http://localhost:5000/getdata/${category}`);
-        const response = await data.json();
-        setProducts(response);
-      } else {
-        const data = await fetch(`http://localhost:5000/getdata`);
-        const response = await data.json();
-        setProducts(response);
-      }
+      const data = await fetch(
+        category !== undefined && category !== "all"
+          ? `http://localhost:5000/getdata/${category}`
+          : `http://localhost:5000/getdata`
+      );
+      const response = await data.json();
+      setProducts(response);
     } catch (error) {
       console.error(error);
     }
   };
-  
+
   useEffect(() => {
     getProductData();
   }, []);
 
   const handleMouseEvent = (i) => {
-    console.log(hover);
     let newhover = [...hover];
     newhover[i] = hover[i] ? false : true;
-    console.log(newhover);
     setHover(newhover);
   };
 
   const dispatch = useDispatch();
 
-  const handleClick = () => {
-    dispatch({ type: "addProduct" });
-  };
-
   return (
     <>
       <div className="shopitems">
         {products.map(
-          ({ id, price, product, image_alt, image, image_2, handle }, i) => (
+          (
+            { price, product, image_alt, image, image_2, handle, category },
+            i
+          ) => (
             <div
-              key={id}
+              key={i}
               onMouseOver={() => handleMouseEvent(i)}
               onMouseOut={() => handleMouseEvent(i)}
               className="item-container"
@@ -72,7 +67,15 @@ export default function ItemDisplay({ color, size }) {
                 <ShoppingBasketIcon
                   fontSize="large"
                   className="icon"
-                  onClick={handleClick}
+                  onClick={() => {
+                    dispatch({
+                      price,
+                      product,
+                      size: "medium",
+                      image,
+                      image_alt,
+                    });
+                  }}
                 />
               </div>
               <p className="product-description">{product}</p>

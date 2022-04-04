@@ -20,13 +20,13 @@ export default function HomePage() {
       <div className="hp-categories">
         <div className="left">
           <h2>View T-Shirts</h2>
-          <Link className="view-more" to="/products/tshirts">
+          <Link className="view-more" to="/categories/tshirts/products">
             View More
           </Link>
         </div>
         <div className="right">
           <h2>View Hoodies</h2>
-          <Link className="view-more" to="/products/hoodies">
+          <Link className="view-more" to="/categories/hoodies/products">
             View More
           </Link>
         </div>

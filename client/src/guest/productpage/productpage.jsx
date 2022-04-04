@@ -6,9 +6,16 @@ import "./productpage.scss";
 import { useState } from "react";
 
 export default function ProductPage() {
-  const [color, setColor] = useState(null);
-  const [size, setSize] = useState(null);
+  const [filters, setFilters] = useState({});
 
+  const handleChange = (e) => {
+    setFilters({
+      ...filters,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  console.log(filters);
   return (
     <div className="product-page">
       <NavBar />
@@ -20,22 +27,15 @@ export default function ProductPage() {
           <select
             name="color"
             className="select-filter"
-            onChange={(e) => setColor(e.target.value)}
+            onChange={handleChange}
           >
             <option hidden defaultValue="color">
               Color
             </option>
             <option value="black">Black</option>
             <option value="white">White</option>
-            <option value="red">Red</option>
-            <option value="blue">Blue</option>
-            <option value="orange">Orange</option>
           </select>
-          <select
-            name="size"
-            className="select-filter"
-            onChange={(e) => setSize(e.target.value)}
-          >
+          <select name="size" className="select-filter" onChange={handleChange}>
             <option hidden defaultValue="size">
               Size
             </option>
@@ -54,7 +54,7 @@ export default function ProductPage() {
           </select>
         </div>
       </div>
-      <ItemDisplay color={color} size={size} />
+      <ItemDisplay filters={filters} />
       <Footer />
     </div>
   );

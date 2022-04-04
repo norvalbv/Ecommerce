@@ -11,20 +11,20 @@ export default function Categories() {
       <div className="categories-inner-container">
         <div className="left">
           <h2>View T-Shirts</h2>
-          <Link className="view-more" to="/products/tshirts">
+          <Link className="view-more" to="/categories/tshirts/products">
             View More
           </Link>
         </div>
         <div className="right">
           <h2>View Hoodies</h2>
-          <Link className="view-more" to="/products/hoodies">
+          <Link className="view-more" to="/categories/hoodies/products">
             View More
           </Link>
         </div>
       </div>
       <div className="all-items">
         <h2>View All Items</h2>
-        <Link className="view-more" to="/products/all">
+        <Link className="view-more" to="/categories/all/products">
           View More
         </Link>
       </div>
