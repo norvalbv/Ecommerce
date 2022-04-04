@@ -22,4 +22,15 @@ const getCategoryData = async (req, res) => {
   }
 };
 
-module.exports = { getAllData, getCategoryData };
+const getProduct = async (req, res) => {
+  try {
+    const data = await pool.query(
+      `SELECT * FROM products WHERE handle = '${req.params.handle}'`
+    );
+    res.send(data.rows);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+module.exports = { getAllData, getCategoryData, getProduct };

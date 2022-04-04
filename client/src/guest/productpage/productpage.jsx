@@ -1,6 +1,6 @@
 import BreadcrumbsComponent from "../../components/breadcrumbs";
 import NavBar from "../../components/navbar/navbar";
-import ShopItems from "../../components/shopitems/shopitems";
+import ItemDisplay from "../../components/itemdisplay/itemdisplay";
 import Footer from "../../components/footer/footer";
 import "./productpage.scss";
 import { useState } from "react";
@@ -22,7 +22,7 @@ export default function ProductPage() {
             className="select-filter"
             onChange={(e) => setColor(e.target.value)}
           >
-            <option hidden disabled defaultValue="Color" value>
+            <option hidden defaultValue="color">
               Color
             </option>
             <option value="black">Black</option>
@@ -36,7 +36,7 @@ export default function ProductPage() {
             className="select-filter"
             onChange={(e) => setSize(e.target.value)}
           >
-            <option hidden disabled defaultValue="Size" value>
+            <option hidden defaultValue="size">
               Size
             </option>
             <option value="small">S</option>
@@ -54,7 +54,7 @@ export default function ProductPage() {
           </select>
         </div>
       </div>
-      <ShopItems color={color} size={size} />
+      <ItemDisplay color={color} size={size} />
       <Footer />
     </div>
   );

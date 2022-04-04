@@ -1,11 +1,11 @@
 import "./homepage.scss";
 import NavBar from "../../components/navbar/navbar";
 import Intro from "../../components/intro/intro";
-import ShopItems from "../../components/shopitems/shopitems";
 import Newsletter from "../../components/newsletter/newsletter";
 import Footer from "../../components/footer/footer";
 import Announcement from "../../components/announcement/announcement";
 import { Link } from "react-router-dom";
+import ItemDisplay from "../../components/itemdisplay/itemdisplay";
 
 export default function HomePage() {
   return (
@@ -13,7 +13,10 @@ export default function HomePage() {
       <Announcement />
       <NavBar />
       <Intro />
-      <ShopItems />
+      <h2 style={{ margin: "0 auto", textDecoration: "underline" }}>
+        Shop Our Latest Products
+      </h2>
+      <ItemDisplay />
       <div className="hp-categories">
         <div className="left">
           <h2>View T-Shirts</h2>

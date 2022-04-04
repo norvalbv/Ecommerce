@@ -18,6 +18,8 @@ app.get("/getdata", index.getAllData);
 
 app.get("/getdata/:category", index.getCategoryData);
 
+app.get("/product/:handle", index.getProduct);
+
 // filters
 app.get("/location/:size", filters.filterSize);
 app.get("/location/:color", filters.filterColor);

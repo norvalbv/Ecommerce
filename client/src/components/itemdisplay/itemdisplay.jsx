@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import "./shopitems.scss";
+import "./itemdisplay.scss";
 import { Link, useLocation } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import { useDispatch } from "react-redux";
 
-export default function ShopItems({ color, size }) {
+export default function ItemDisplay({ color, size }) {
   const [hover, setHover] = useState([]);
   const [products, setProducts] = useState([]);
 
@@ -14,7 +14,7 @@ export default function ShopItems({ color, size }) {
 
   const getProductData = async (req, res) => {
     try {
-      if (category !== "all") {
+      if (category !== undefined && category !== "all") {
         const data = await fetch(`http://localhost:5000/getdata/${category}`);
         const response = await data.json();
         setProducts(response);
@@ -27,13 +27,16 @@ export default function ShopItems({ color, size }) {
       console.error(error);
     }
   };
+  
   useEffect(() => {
     getProductData();
   }, []);
 
   const handleMouseEvent = (i) => {
+    console.log(hover);
     let newhover = [...hover];
     newhover[i] = hover[i] ? false : true;
+    console.log(newhover);
     setHover(newhover);
   };
 
@@ -47,7 +50,7 @@ export default function ShopItems({ color, size }) {
     <>
       <div className="shopitems">
         {products.map(
-          ({ id, price, product, image_alt, image, image_2 }, i) => (
+          ({ id, price, product, image_alt, image, image_2, handle }, i) => (
             <div
               key={id}
               onMouseOver={() => handleMouseEvent(i)}
@@ -60,7 +63,10 @@ export default function ShopItems({ color, size }) {
                 className="item-image"
               ></img>
               <div className="overlay">
-                <Link to="/products" className="search-icon">
+                <Link
+                  to={`/product/${category}/${handle}`}
+                  className="search-icon"
+                >
                   <SearchIcon fontSize="large" className="icon" />
                 </Link>
                 <ShoppingBasketIcon

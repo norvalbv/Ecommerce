@@ -69,6 +69,38 @@ html, body {
   font-size: 1.75rem;
 }
 
+.categories .all-items {
+  background-image: url("../../files/landscape-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 2px solid #F1EEE5;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 50vh;
+}
+
+.categories .all-items .view-more {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #333333;
+  color: #9b9b9b;
+  text-decoration: none;
+}
+
 .categories .categories-inner-container {
   margin: 2rem 0;
   height: 50vh;
@@ -87,7 +119,8 @@ html, body {
 }
 
 .categories .categories-inner-container .left,
-.categories .categories-inner-container .right {
+.categories .categories-inner-container .right,
+.categories .categories-inner-container .all-items {
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-box-flex: 1;
@@ -111,13 +144,15 @@ html, body {
 }
 
 .categories .categories-inner-container .left h2,
-.categories .categories-inner-container .right h2 {
+.categories .categories-inner-container .right h2,
+.categories .categories-inner-container .all-items h2 {
   font-size: 1.5rem;
   margin: 1rem 0;
 }
 
 .categories .categories-inner-container .left .view-more,
-.categories .categories-inner-container .right .view-more {
+.categories .categories-inner-container .right .view-more,
+.categories .categories-inner-container .all-items .view-more {
   padding: 0.25rem 0.5rem;
   border: 1px solid #333333;
   color: #9b9b9b;

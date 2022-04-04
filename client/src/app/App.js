@@ -5,7 +5,7 @@ import Login from "../guest/login/login";
 import ProductPage from "../guest/productpage/productpage";
 import Register from "../guest/register/register";
 import Categories from "../guest/categories/categories";
-import Products from "../components/products/products";
+import Product from "../components/product/product";
 import { Cart } from "../guest/cart/cart";
 import { MyAccount } from "../guest/myaccount/myaccount";
 import FAQ from "../guest/faq/faq";
@@ -37,10 +37,7 @@ function App() {
           path="/products/:category"
           element={<ProductPage info={info} />}
         ></Route>
-        <Route
-          path="/product/:category/:id"
-          element={<Products info={info} />}
-        ></Route>
+        <Route path="/product/:category/:handle" element={<Product />}></Route>
         <Route path="/cart" element={<Cart info={info} />}></Route>
         {/* misc */}
         <Route path="/faqs" element={<FAQ />}></Route>

@@ -89,11 +89,7 @@ html, body {
   gap: 0.5rem;
 }
 
-.product-page .inner-filter select {
-  width: 3rem;
-}
-
-.product-page .inner-filter #color {
+.product-page .inner-filter .select-filter {
   width: 4rem;
 }
 
