@@ -44,6 +44,70 @@
   }
 }
 
+.shopitems {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5%;
+  row-gap: 2rem;
+  width: 100%;
+}
+.item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 250px;
+  gap: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+
+  .item-image {
+    width: 100%;
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  .product-description {
+    font-size: 14px;
+    width: 80%;
+  }
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: invert(100%);
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .icon {
+    cursor: pointer;
+  }
+}
+
+.search-icon {
+  color: inherit;
+}
+
+#latest-products {
+  text-align: center;
+  margin: 1rem 0;
+  text-decoration: underline;
+}
+
 @media only screen and (max-width: 800px) {
   .hp-categories {
     flex-direction: column;

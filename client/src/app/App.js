@@ -30,7 +30,7 @@ function App() {
   return (
     <Routers>
       <Routes>
-        <Route exact path="/" element={<HomePage />}></Route>
+        <Route exact path="/" element={<HomePage info={info} />}></Route>
         {/* product related */}
         <Route path="/categories" element={<Categories />}></Route>
         <Route
