@@ -9,6 +9,12 @@ const devConfig = {
   database: process.env.PG_DATABASE,
 };
 
-const pool = new Pool(devConfig);
+const proConfig = {
+  connectionString: process.env.DATABASE_URL,
+};
+
+const pool = new Pool(
+  process.env.NODE_ENV === "production" ? proConfig : devConfig
+);
 
 module.exports = pool;

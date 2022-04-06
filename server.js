@@ -5,13 +5,15 @@ const cors = require("cors");
 const index = require("./routes/index");
 const filters = require("./routes/filters");
 const path = require("path");
-const pool = require("./db/pool");
 
 const PORT = process.env.PORT || 5000;
 
 // middlewear
 
 app.use(cors());
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "client/build")));
+};
 
 // get data
 app.get("/getdata", index.getAllData);
