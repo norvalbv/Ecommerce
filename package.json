@@ -1,6 +1,10 @@
 {
   "name": "ecommerce-app",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.13.2",
+    "npm": "8.1.2"
+  },
   "description": "This is currently a front end only project is built with React.",
   "main": "index.js",
   "scripts": {
