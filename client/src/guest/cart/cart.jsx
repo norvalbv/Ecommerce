@@ -55,6 +55,7 @@ export const Cart = () => {
           <div className="cart-info">
             <h3>{cart.quantity} items in your cart</h3>
             <h3>Your Total: £{cart.totalPrice}</h3>
+            <p>checkout not implemented...</p>
           </div>
         </>
       ) : (
