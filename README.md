@@ -8,9 +8,9 @@ Screenshots:
 
 Desktop:
 
-![E-commerce site landing page for desktop](./src/files/landingpage.png "E-commerce site")
+![E-commerce site landing page for desktop](./client/src/files/landingpage.png)
 
 
 Mobile:
 
-![E-commerce site landing page for mobile](./src/files/landingpage-mobile.png "E-commerce site")
+![E-commerce site landing page for mobile](./client/src/files/landingpage-mobile.png)

@@ -22,6 +22,9 @@ export default function ItemDisplay({ filters, sort }) {
           : `http://localhost:5000/getdata`
       );
       const response = await data.json();
+      console.log(response);
+      console.log(typeof response);
+
       setProducts(response);
     } catch (error) {
       console.error(error);
@@ -32,6 +35,7 @@ export default function ItemDisplay({ filters, sort }) {
     getProductData();
   }, []);
 
+  console.log(typeof filteredProducts);
   const handleMouseEvent = (i) => {
     let newhover = [...hover];
     newhover[i] = hover[i] ? false : true;
